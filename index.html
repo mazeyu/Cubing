@@ -14,7 +14,7 @@
         <button type="button"> 5*5 Cube </button>
     </div>
     <script>
-        let Rubik = NewPyramix();
+        let Rubik = NewCube(5);
 
         var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
         var renderer = new THREE.WebGLRenderer();
@@ -29,7 +29,7 @@
         for (let piece of Rubik.pieces) {
             scene.add(piece);
         }
-        Rubik.moveList = ['R\'', 'L', 'R', 'L\''];//['R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
+        Rubik.moveList = ['R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
         function render() {
             requestAnimationFrame(render);
             for (let piece of Rubik.pieces) {
