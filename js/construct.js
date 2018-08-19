@@ -51,7 +51,7 @@ class Tcube {
                 v.add(v, centroid);
             }
             let mesh = THREE.SceneUtils.createMultiMaterialObject(geo, mat);
-            mesh.children[1].material.wireframeLinewidth = 10;
+            //mesh.children[1].material.wireframeLinewidth = 10;
             this.pieces.push(mesh);
         }
     }
