@@ -79,10 +79,12 @@ class Tcube {
         let y = this.moveData[move].y;
         let z = this.moveData[move].z;
         let v = this.moveData[move].v;
+        let v2 = this.moveData[move].v2;
         let d = this.moveData[move].d;
         for (let i = 0; i < this.pieces.length; i++) {
             this.pieces[i].children[0].geometry.computeCentroids();
-            if (this.pieces[i].children[0].geometry.faces[0].centroid.dot(new THREE.Vector3(x, y, z)) >= v) {
+            let centroid = this.pieces[i].children[0].geometry.faces[0].centroid;
+            if (centroid.dot(new THREE.Vector3(x, y, z)) >= v && (v2 === undefined || centroid.dot(new THREE.Vector3(x, y, z)) <= v2)) {
                 let vs = this.pieces[i].children[0].geometry.vertices;
                 for (let v of vs) {
                     let ax = norm(new THREE.Vector3(x, y, z));
@@ -97,7 +99,7 @@ class Tcube {
         this.currentMove.prog -= 1;
     }
 
-    addmove(x, y, z, v, move) {
+    addmove(x, y, z, v, move, v2, g) {
         let pieces = [];
         this.center = new THREE.Vector3();
         for (let i = 0; i < this.pieces.length; i++) {
@@ -106,53 +108,56 @@ class Tcube {
             this.center.addSelf(centroid);
         }
         this.center.divideScalar(this.pieces.length);
-        for (let i = 0; i < this.pieces.length; i++) {
-            let centroid = this.pieces[i].children[0].geometry.faces[0].centroid;
-            if (centroid.dot(new THREE.Vector3(x, y, z)) >= v) {
-                centroid.subSelf(this.center);
-                let vec = new THREE.Vector3();
-                vec.cross(centroid, new THREE.Vector3(x, y, z));
-                pieces.push({len: vec.length(), v: vec, id: i});
+        if (g === undefined) {
+            for (let i = 0; i < this.pieces.length; i++) {
+                let centroid = this.pieces[i].children[0].geometry.faces[0].centroid;
+                if (centroid.dot(new THREE.Vector3(x, y, z)) >= v && (v2 === undefined || centroid.dot(new THREE.Vector3(x, y, z)) <= v2)) {
+                    centroid.subSelf(this.center);
+                    let vec = new THREE.Vector3();
+                    vec.cross(centroid, new THREE.Vector3(x, y, z));
+                    pieces.push({len: vec.length(), v: vec, id: i});
+                }
             }
-        }
-        pieces.sort((a, b) => a.len - b.len);
-
-        let lenmap = {};
-        for (let piece of pieces) {
-            let piecelen = Math.round(piece.len * 1000);
-            if (piecelen in lenmap) {
-                lenmap[piecelen].push(piece);
-                let cos = piece.v.dot(lenmap[piecelen][0].v);
-                let sin = new THREE.Vector3().cross(piece.v, lenmap[piecelen][0].v);
-                if (sin.dot(new THREE.Vector3(x, y, z)) > 0) {
-                    sin = sin.length();
+            pieces.sort((a, b) => a.len - b.len);
+            let lenmap = {};
+            for (let piece of pieces) {
+                let piecelen = Math.round(piece.len * 1000);
+                if (piecelen in lenmap) {
+                    lenmap[piecelen].push(piece);
+                    let cos = piece.v.dot(lenmap[piecelen][0].v);
+                    let sin = new THREE.Vector3().cross(piece.v, lenmap[piecelen][0].v);
+                    if (sin.dot(new THREE.Vector3(x, y, z)) > 0) {
+                        sin = sin.length();
+                    }
+                    else {
+                        sin = -sin.length();
+                    }
+                    piece.angle = Math.atan2(sin, cos);
                 }
                 else {
-                    sin = -sin.length();
+                    piece.angle = 0;
+                    lenmap[piecelen] = [piece];
                 }
-                piece.angle = Math.atan2(sin, cos);
             }
-            else {
-                piece.angle = 0;
-                lenmap[piecelen] = [piece];
+
+            function gcd(a, b) {
+                if (b === 0) return a;
+                return gcd(b, a % b);
             }
-        }
-        function gcd(a, b) {
-            if (b === 0) return a;
-            return gcd(b, a % b);
-        }
-        let g = 0;
-        for (let i in lenmap) {
-            if (lenmap[i].length === 1) delete lenmap[i];
-            else {
-                lenmap[i].sort((a, b) => a.angle - b.angle);
-                g = gcd(g, lenmap[i].length);
+
+            g = 0;
+            for (let i in lenmap) {
+                if (lenmap[i].length === 1) delete lenmap[i];
+                else {
+                    lenmap[i].sort((a, b) => a.angle - b.angle);
+                    g = gcd(g, lenmap[i].length);
+                }
             }
         }
-        this.moveData[move] = {x: x, y: y, z: z, v: v, d: 1 / g};
-        this.moveData[move + '2'] = {x: x, y: y, z: z, v: v, d: 2 / g};
-        this.moveData[move + '\''] = {x: x, y: y, z: z, v: v, d: - 1 / g};
-        this.moveData[move + '\'2'] = {x: x, y: y, z: z, v: v, d: - 2 / g};
+        this.moveData[move] = {x: x, y: y, z: z, v: v, d: 1 / g, v2: v2};
+        this.moveData[move + '2'] = {x: x, y: y, z: z, v: v, d: 2 / g, v2: v2};
+        this.moveData[move + '\''] = {x: x, y: y, z: z, v: v, d: - 1 / g, v2: v2};
+        this.moveData[move + '\'2'] = {x: x, y: y, z: z, v: v, d: - 2 / g, v2: v2};
     }
 
 }
@@ -225,6 +230,7 @@ function NewCube(n) {
     cube.fill(0, 0, 1, -1 / 2, yellow);
     cube.fill(0, 1, 0, 1 / 2, blue);
     cube.fill(0, 1, 0, -1 / 2, green);
+    cube.addmove(-1, 0, 0, -1 / 2 + 1 / n, 'M', 1 / 2 - 1 / n, 4);
     cube.addmove(1, 0, 0, 1 / 2 - 1 / n, 'R');
     cube.addmove(-1, 0, 0, 1 / 2 - 1 / n, 'L');
     cube.addmove(0, 0, 1, 1 / 2 - 1 / n, 'U');
