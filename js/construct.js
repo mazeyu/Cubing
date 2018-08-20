@@ -147,7 +147,7 @@ class Tcube {
 
             g = 0;
             for (let i in lenmap) {
-                if (lenmap[i].length === 1) delete lenmap[i];
+                if (i == 0) delete lenmap[i];
                 else {
                     lenmap[i].sort((a, b) => a.angle - b.angle);
                     g = gcd(g, lenmap[i].length);
@@ -230,18 +230,19 @@ function NewCube(n) {
     cube.fill(0, 0, 1, -1 / 2, yellow);
     cube.fill(0, 1, 0, 1 / 2, blue);
     cube.fill(0, 1, 0, -1 / 2, green);
-    cube.addmove(-1, 0, 0, -1 / 2 + 1 / n, 'M', 1 / 2 - 1 / n, 4);
-    cube.addmove(1, 0, 0, 1 / 2 - 1 / n, 'R');
-    cube.addmove(-1, 0, 0, 1 / 2 - 1 / n, 'L');
-    cube.addmove(0, 0, 1, 1 / 2 - 1 / n, 'U');
-    cube.addmove(0, 0, -1, 1 / 2 - 1 / n, 'D');
-    cube.addmove(0, -1, 0, 1 / 2 - 1 / n, 'F');
-    cube.addmove(0, 1, 0, 1 / 2 - 1 / n, 'B');
-    cube.addmove(1, 0, 0, 1 / 2 - 2 / n, 'r');
-    cube.addmove(-1, 0, 0, 1 / 2 - 2 / n, 'l');
-    cube.addmove(0, 0, 1, 1 / 2 - 2 / n, 'u');
-    cube.addmove(0, 0, -1, 1 / 2 - 2 / n, 'd');
-    cube.addmove(0, -1, 0, 1 / 2 - 2 / n, 'f');
-    cube.addmove(0, 1, 0, 1 / 2 - 2 / n, 'b');
+    let thre = 1 / 2 - 1 / n - 0.01;
+    cube.addmove(-1, 0, 0, -thre, 'M', thre, 4);
+    cube.addmove(1, 0, 0, thre, 'R');
+    cube.addmove(-1, 0, 0, thre, 'L');
+    cube.addmove(0, 0, 1, thre, 'U');
+    cube.addmove(0, 0, -1, thre, 'D');
+    cube.addmove(0, -1, 0, thre, 'F');
+    cube.addmove(0, 1, 0, thre, 'B');
+    cube.addmove(1, 0, 0, thre - 1 / n, 'r');
+    cube.addmove(-1, 0, 0, thre - 1 / n, 'l');
+    cube.addmove(0, 0, 1, thre - 1 / n, 'u');
+    cube.addmove(0, 0, -1, thre - 1 / n, 'd');
+    cube.addmove(0, -1, 0, thre - 1 / n, 'f');
+    cube.addmove(0, 1, 0, thre - 1 / n, 'b');
     return cube;
 }

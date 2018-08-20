@@ -3,61 +3,93 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
-    <!--<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>-->
-    <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/construct.js"></script>
 </head>
 
 <body>
-    <!-- 标准的按钮 -->
-    <button type="button" class="btn btn-default">默认按钮</button>
-    <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
-    <button type="button" class="btn btn-primary">原始按钮</button>
-    <!-- 表示一个成功的或积极的动作 -->
-    <button type="button" class="btn btn-success">成功按钮</button>
-    <!-- 信息警告消息的上下文按钮 -->
-    <button type="button" class="btn btn-info">信息按钮</button>
-    <!-- 表示应谨慎采取的动作 -->
-    <button type="button" class="btn btn-warning">警告按钮</button>
-    <!-- 表示一个危险的或潜在的负面动作 -->
-    <button type="button" class="btn btn-danger">危险按钮</button>
-    <!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
-    <button type="button" class="btn btn-link">链接按钮</button>
-    <script src="js/three.js"></script>
-    <script src="js/construct.js"></script>
-    <div align="center">
-        <button type="button"> Rubik's Cube </button>
-        <button type="button"> 4*4 Cube </button>
-        <button type="button"> 5*5 Cube </button>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cubing</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">添加魔方 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="#">二阶魔方</a></li>
+                        <li><a href="#">三阶魔方</a></li>
+                        <li><a href="#">四阶魔方</a></li>
+                        <li><a href="#">五阶魔方</a></li>
+                        <li><a href="#">六阶魔方</a></li>
+                        <li><a href="#">七阶魔方</a></li>
+
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">金字塔魔方</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+    <div class="panel panel-primary" align="center">
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body" id='1'>
+
+        </div>
     </div>
-    <script>
-        let Rubik = NewCube(5);
 
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
+    <div class="panel panel-default">
+        <div class="panel-body" id='2'>
 
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        </div>
+    </div>
+</div>
 
-        document.body.appendChild(renderer.domElement);
+<script>
 
-        camera.position = new THREE.Vector3(-1, -2, 2);
-        camera.rotation.x = 1;
-        var scene = new THREE.Scene();
+
+    var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+
+    renderer.setSize(500, 500);
+
+    document.getElementById('1').appendChild(renderer.domElement);
+
+    camera.position = new THREE.Vector3(0, -2, 2);
+    camera.rotation.x = 1;
+    var scene = new THREE.Scene();
+
+    let Rubik = NewCube(3);
+    for (let piece of Rubik.pieces) {
+        scene.add(piece);
+    }
+    Rubik.moveList = ['R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
+
+    function render() {
+        requestAnimationFrame(render);
         for (let piece of Rubik.pieces) {
-            scene.add(piece);
+            piece.children[0].geometry.verticesNeedUpdate = true;
+            piece.children[1].geometry.verticesNeedUpdate = true;
         }
-        Rubik.moveList = ['M', 'R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
-        function render() {
-            requestAnimationFrame(render);
-            for (let piece of Rubik.pieces) {
-                piece.children[0].geometry.verticesNeedUpdate = true;
-                piece.children[1].geometry.verticesNeedUpdate = true;
-            }
-            Rubik.dMove(20);
-            renderer.render(scene, camera);
-        }
-        render()
-    </script>
+        Rubik.dMove(20);
+        renderer.render(scene, camera);
+    }
+
+    render()
+</script>
 </body>
 
 </html>

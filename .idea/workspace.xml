@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added">
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/construct.js" afterDir="false" />
@@ -59,28 +55,28 @@
           <entry key="60" value="1" />
           <entry key="75" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="27" />
+          <entry key="js" value="29" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="36" />
+          <entry key="JavaScript" value="38" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1721" />
-          <entry key="js" value="9072" />
+          <entry key="html" value="1965" />
+          <entry key="js" value="9193" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1721" />
-          <entry key="JavaScript" value="9072" />
+          <entry key="HTML" value="1965" />
+          <entry key="JavaScript" value="9193" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -91,8 +87,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="331">
+              <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/three.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="6258" selection-start-line="6258" selection-end-line="6258" />
             </state>
           </provider>
         </entry>
@@ -100,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/construct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="866">
+              <caret line="148" column="35" lean-forward="true" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -124,6 +129,7 @@
       <find>double</find>
       <find>compu</find>
       <find>jquery</find>
+      <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html lang\=\&quot;en\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\.0\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;bootstrap\-3\.3\.7\-dist\/css\/bootstrap\.min\.css\&quot;\&gt;\n    \&lt;script src\=\&quot;https\:\/\/cdn\.bootcss\.com\/jquery\/2\.1\.1\/jquery\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;bootstrap\-3\.3\.7\-dist\/js\/bootstrap\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/three\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/construct\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\n\&lt;nav class\=\&quot;navbar navbar\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n        \&lt;\!\-\- Brand and toggle get grouped for better mobile display \-\-\&gt;\n        \&lt;div class\=\&quot;navbar\-header\&quot;\&gt;\n            \&lt;a class\=\&quot;navbar\-brand\&quot; href\=\&quot;\#\&quot;\&gt;Cubing\&lt;\/a\&gt;\n        \&lt;\/div\&gt;\n\n        \&lt;\!\-\- Collect the nav links\, forms\, and other content for toggling \-\-\&gt;\n        \&lt;div class\=\&quot;collapse navbar\-collapse\&quot; id\=\&quot;bs\-example\-navbar\-collapse\-1\&quot;\&gt;\n            \&lt;ul class\=\&quot;nav navbar\-nav\&quot;\&gt;\n                \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                    \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                       aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                    \&lt;ul class\=\&quot;dropdown\-menu\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;三阶魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\n                            \&lt;a href\=\&quot;\#\&quot;\&gt;\n                        \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                        \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                           aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;li role\=\&quot;separator\&quot; class\=\&quot;divider\&quot;\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;金字塔魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/li\&gt;\n            \&lt;\/ul\&gt;\n        \&lt;\/div\&gt;\&lt;\!\-\- \/\.navbar\-collapse \-\-\&gt;\n    \&lt;\/div\&gt;\&lt;\!\-\- \/\.container\-fluid \-\-\&gt;\n\&lt;\/nav\&gt;\n\&lt;div class\=\&quot;panel panel\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;panel\-body\&quot; id\=\'1\'\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/div\&gt;\n\&lt;script\&gt;\n    let Rubik \= NewCube\(1\)\;\n\n    var camera \= new THREE\.PerspectiveCamera\(60\, 1\, 0\.1\, 1000\)\;\n    var renderer \= new THREE\.WebGLRenderer\(\)\;\n\n    renderer\.setSize\(500\, 500\)\;\n\n    document\.getElementById\(\'1\'\)\.appendChild\(renderer\.domElement\)\;\n\n    camera\.position \= new THREE\.Vector3\(0\, \-2\, 2\)\;\n    camera\.rotation\.x \= 1\;\n    var scene \= new THREE\.Scene\(\)\;\n    for \(let piece of Rubik\.pieces\) \{\n        scene\.add\(piece\)\;\n    \}\n    Rubik\.moveList \= \[\'R\'\, \'U\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\\\'\'\, \'F\'\, \'R2\'\, \'U\\\'\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\'\, \'U\'\, \'R\\\'\'\, \'F\\\'\'\]\;\n\n    function render\(\) \{\n        requestAnimationFrame\(render\)\;\n        for \(let piece of Rubik\.pieces\) \{\n            piece\.children\[0\]\.geometry\.verticesNeedUpdate \= true\;\n            piece\.children\[1\]\.geometry\.verticesNeedUpdate \= true\;\n        \}\n        Rubik\.dMove\(20\)\;\n        renderer\.render\(scene\, camera\)\;\n    \}\n\n    render\(\)\n\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,10 +153,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1440" />
-    <option name="y" value="-400" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -165,6 +170,11 @@
             <path>
               <item name="Cubing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cubing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cubing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cubing" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-3.3.7-dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cubing" type="b2602c69:ProjectViewProjectNode" />
@@ -230,7 +240,7 @@
       <workItem from="1534260596666" duration="162000" />
       <workItem from="1534260763525" duration="1192000" />
       <workItem from="1534262031450" duration="27833000" />
-      <workItem from="1534688060066" duration="1940000" />
+      <workItem from="1534688060066" duration="9089000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -243,23 +253,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76756000" />
+    <option name="totallyTimeSpent" value="83905000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-400" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="820" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18114798" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11698379" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.2696156" side_tool="true" visible="true" weight="0.39481866" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.2706131" side_tool="true" visible="true" weight="0.13186814" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.7303844" weight="0.08704663" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.72938687" visible="true" weight="0.13186814" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -402,13 +412,6 @@
     <entry file="http://localhost:63342/Cubing/js/three.js">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="693" column="4" selection-start-line="693" selection-start-column="4" selection-end-line="693" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap-4.1.3-dist/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4039">
@@ -416,17 +419,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap-3.3.7-dist/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="6258" selection-start-line="6258" selection-end-line="6258" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        <state relative-caret-position="866">
+          <caret line="148" column="35" lean-forward="true" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="331">
+          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
         </state>
       </provider>
     </entry>
