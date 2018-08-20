@@ -246,3 +246,58 @@ function NewCube(n) {
     cube.addmove(0, 1, 0, thre - 1 / n, 'b');
     return cube;
 }
+
+function displayCube(cube) {
+    cube.camera = new THREE.PerspectiveCamera(55, 1, 0.1, 1000);
+    cube.renderer = new THREE.WebGLRenderer();
+    cube.renderer.setSize(500, 500);
+    let newPanel = document.createElement('div');
+    newPanel.className = 'panel panel-primary';
+    let newBody = document.createElement('div');
+    newBody.className = 'panel-body';
+    newBody.id = cnt.toString();
+    newBody.align = 'center';
+    document.getElementById('container').appendChild(newPanel);
+    newPanel.appendChild(newBody);
+    document.getElementById(cnt.toString()).appendChild(cube.renderer.domElement);
+    cnt = cnt + 1;
+    cube.camera.position = new THREE.Vector3(0, -2, 2);
+    cube.camera.rotation.x = 1;
+    cube.scene = new THREE.Scene();
+
+
+    for (let piece of cube.pieces) {
+        cube.scene.add(piece);
+    }
+    cube.moveList = ['R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
+
+    cube.render = function () {
+        requestAnimationFrame(cube.render);
+        for (let piece of cube.pieces) {
+            piece.children[0].geometry.verticesNeedUpdate = true;
+            piece.children[1].geometry.verticesNeedUpdate = true;
+        }
+        cube.dMove(20);
+        cube.renderer.render(cube.scene, cube.camera);
+    };
+
+    cube.render();
+}
+
+function addCube(n) {
+    let newCube = NewCube(n);
+    myCube.push(newCube);
+    displayCube(newCube);
+}
+
+function addRubik() {
+    let newCube = NewCube(3);
+    myCube.push(newCube);
+    displayCube(newCube);
+}
+
+function addPyra() {
+    let Pyra = NewPyramix();
+    myCube.push(Pyra);
+    displayCube(Pyra);
+}

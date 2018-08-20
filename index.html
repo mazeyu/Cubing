@@ -12,7 +12,7 @@
 
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -26,67 +26,35 @@
                    aria-expanded="false">添加魔方 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
 
-                    <li><a href="#">二阶魔方</a></li>
-                    <li><a href="#">三阶魔方</a></li>
-                    <li><a href="#">四阶魔方</a></li>
-                    <li><a href="#">五阶魔方</a></li>
-                    <li><a href="#">六阶魔方</a></li>
-                    <li><a href="#">七阶魔方</a></li>
+                    <li><a href="#" onclick="addCube(2)">二阶魔方</a></li>
+                    <li><a href="#" onclick="addCube(3)">三阶魔方</a></li>
+                    <li><a href="#" onclick="addCube(4)">四阶魔方</a></li>
+                    <li><a href="#" onclick="addCube(5)">五阶魔方</a></li>
+                    <li><a href="#" onclick="addCube(6)">六阶魔方</a></li>
+                    <li><a href="#" onclick="addCube(7)">七阶魔方</a></li>
 
                     <li role="separator" class="divider"></li>
-                    <li><a href="#">金字塔魔方</a></li>
+                    <li><a href="#" onclick="addPyra()">金字塔魔方</a></li>
                 </ul>
             </li>
         </ul>
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid">
-    <div class="panel panel-primary" align="center">
-        <div class="panel-heading">Panel heading</div>
-        <div class="panel-body" id='1'>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid" id = 'container'>
 
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-body" id='2'>
-
-        </div>
-    </div>
 </div>
 
 <script>
-
-
-    var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
-    var renderer = new THREE.WebGLRenderer();
-
-    renderer.setSize(500, 500);
-
-    document.getElementById('1').appendChild(renderer.domElement);
-
-    camera.position = new THREE.Vector3(0, -2, 2);
-    camera.rotation.x = 1;
-    var scene = new THREE.Scene();
-
+    let cnt = 0;
     let Rubik = NewCube(3);
-    for (let piece of Rubik.pieces) {
-        scene.add(piece);
-    }
-    Rubik.moveList = ['R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
+    displayCube(Rubik);
 
-    function render() {
-        requestAnimationFrame(render);
-        for (let piece of Rubik.pieces) {
-            piece.children[0].geometry.verticesNeedUpdate = true;
-            piece.children[1].geometry.verticesNeedUpdate = true;
-        }
-        Rubik.dMove(20);
-        renderer.render(scene, camera);
-    }
-
-    render()
+    let myCube = [Rubik];
 </script>
 </body>
 
