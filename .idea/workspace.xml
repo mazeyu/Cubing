@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added">
-      <change afterPath="$PROJECT_DIR$/js/solver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/construct.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,14 +52,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2397" />
+          <entry key="html" value="2439" />
           <entry key="js" value="16479" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2420" />
+          <entry key="HTML" value="2462" />
           <entry key="JavaScript" value="16456" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
@@ -72,11 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="47" column="84" lean-forward="true" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+            <state relative-caret-position="264">
+              <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -90,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/solver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+            <state relative-caret-position="351">
+              <caret line="251" column="50" lean-forward="true" selection-start-line="251" selection-start-column="50" selection-end-line="251" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -133,8 +129,8 @@
         <option value="$PROJECT_DIR$/js/a.js" />
         <option value="$PROJECT_DIR$/js/three.js" />
         <option value="$PROJECT_DIR$/js/construct.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/solver.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -235,7 +231,7 @@
       <workItem from="1534688060066" duration="11524000" />
       <workItem from="1534751772531" duration="18194000" />
       <workItem from="1534838928158" duration="59000" />
-      <workItem from="1534839070193" duration="18004000" />
+      <workItem from="1534839070193" duration="18191000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -248,7 +244,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122597000" />
+    <option name="totallyTimeSpent" value="122784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="0" />
@@ -448,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="47" column="84" lean-forward="true" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1118">
@@ -471,8 +460,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/solver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+        <state relative-caret-position="351">
+          <caret line="251" column="50" lean-forward="true" selection-start-line="251" selection-start-column="50" selection-end-line="251" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
         </state>
       </provider>
     </entry>
