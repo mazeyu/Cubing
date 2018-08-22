@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added">
+      <change afterPath="$PROJECT_DIR$/js/solver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/construct.js" afterDir="false" />
@@ -19,12 +21,13 @@
     <session id="276938071">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,28 +43,28 @@
           <entry key="60" value="1" />
           <entry key="75" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="32" />
-          <entry key="ts" value="2" />
+          <entry key="js" value="35" />
+          <entry key="ts" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="42" />
-          <entry key="TypeScript" value="2" />
+          <entry key="JavaScript" value="45" />
+          <entry key="TypeScript" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2128" />
-          <entry key="js" value="9781" />
+          <entry key="html" value="2397" />
+          <entry key="js" value="16479" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2128" />
-          <entry key="JavaScript" value="9781" />
+          <entry key="HTML" value="2420" />
+          <entry key="JavaScript" value="16456" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -69,11 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+            <state relative-caret-position="415">
+              <caret line="47" column="84" lean-forward="true" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -81,8 +84,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/construct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="286" column="21" lean-forward="true" selection-start-line="286" selection-start-column="21" selection-end-line="286" selection-end-column="21" />
+            <state relative-caret-position="-1118">
+              <caret line="249" column="21" lean-forward="true" selection-start-line="249" selection-start-column="21" selection-end-line="249" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/solver.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
             </state>
           </provider>
         </entry>
@@ -106,6 +118,9 @@
       <find>compu</find>
       <find>jquery</find>
       <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html lang\=\&quot;en\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\.0\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;bootstrap\-3\.3\.7\-dist\/css\/bootstrap\.min\.css\&quot;\&gt;\n    \&lt;script src\=\&quot;https\:\/\/cdn\.bootcss\.com\/jquery\/2\.1\.1\/jquery\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;bootstrap\-3\.3\.7\-dist\/js\/bootstrap\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/three\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/construct\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\n\&lt;nav class\=\&quot;navbar navbar\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n        \&lt;\!\-\- Brand and toggle get grouped for better mobile display \-\-\&gt;\n        \&lt;div class\=\&quot;navbar\-header\&quot;\&gt;\n            \&lt;a class\=\&quot;navbar\-brand\&quot; href\=\&quot;\#\&quot;\&gt;Cubing\&lt;\/a\&gt;\n        \&lt;\/div\&gt;\n\n        \&lt;\!\-\- Collect the nav links\, forms\, and other content for toggling \-\-\&gt;\n        \&lt;div class\=\&quot;collapse navbar\-collapse\&quot; id\=\&quot;bs\-example\-navbar\-collapse\-1\&quot;\&gt;\n            \&lt;ul class\=\&quot;nav navbar\-nav\&quot;\&gt;\n                \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                    \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                       aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                    \&lt;ul class\=\&quot;dropdown\-menu\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;三阶魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\n                            \&lt;a href\=\&quot;\#\&quot;\&gt;\n                        \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                        \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                           aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;li role\=\&quot;separator\&quot; class\=\&quot;divider\&quot;\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;金字塔魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/li\&gt;\n            \&lt;\/ul\&gt;\n        \&lt;\/div\&gt;\&lt;\!\-\- \/\.navbar\-collapse \-\-\&gt;\n    \&lt;\/div\&gt;\&lt;\!\-\- \/\.container\-fluid \-\-\&gt;\n\&lt;\/nav\&gt;\n\&lt;div class\=\&quot;panel panel\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;panel\-body\&quot; id\=\'1\'\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/div\&gt;\n\&lt;script\&gt;\n    let Rubik \= NewCube\(1\)\;\n\n    var camera \= new THREE\.PerspectiveCamera\(60\, 1\, 0\.1\, 1000\)\;\n    var renderer \= new THREE\.WebGLRenderer\(\)\;\n\n    renderer\.setSize\(500\, 500\)\;\n\n    document\.getElementById\(\'1\'\)\.appendChild\(renderer\.domElement\)\;\n\n    camera\.position \= new THREE\.Vector3\(0\, \-2\, 2\)\;\n    camera\.rotation\.x \= 1\;\n    var scene \= new THREE\.Scene\(\)\;\n    for \(let piece of Rubik\.pieces\) \{\n        scene\.add\(piece\)\;\n    \}\n    Rubik\.moveList \= \[\'R\'\, \'U\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\\\'\'\, \'F\'\, \'R2\'\, \'U\\\'\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\'\, \'U\'\, \'R\\\'\'\, \'F\\\'\'\]\;\n\n    function render\(\) \{\n        requestAnimationFrame\(render\)\;\n        for \(let piece of Rubik\.pieces\) \{\n            piece\.children\[0\]\.geometry\.verticesNeedUpdate \= true\;\n            piece\.children\[1\]\.geometry\.verticesNeedUpdate \= true\;\n        \}\n        Rubik\.dMove\(20\)\;\n        renderer\.render\(scene\, camera\)\;\n    \}\n\n    render\(\)\n\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
+      <find>cnt</find>
+      <find>add2</find>
+      <find>solve</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,6 +134,7 @@
         <option value="$PROJECT_DIR$/js/three.js" />
         <option value="$PROJECT_DIR$/js/construct.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/solver.js" />
       </list>
     </option>
   </component>
@@ -128,7 +144,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="820" />
@@ -139,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,6 +181,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,7 +233,9 @@
       <workItem from="1534260763525" duration="1192000" />
       <workItem from="1534262031450" duration="27833000" />
       <workItem from="1534688060066" duration="11524000" />
-      <workItem from="1534751772531" duration="1768000" />
+      <workItem from="1534751772531" duration="18194000" />
+      <workItem from="1534838928158" duration="59000" />
+      <workItem from="1534839070193" duration="18004000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -230,23 +248,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88108000" />
+    <option name="totallyTimeSpent" value="122597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="820" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11698379" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.27131784" side_tool="true" visible="true" weight="0.10714286" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.27202255" side_tool="true" visible="true" weight="0.18956044" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="6" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.72868216" visible="true" weight="0.10714286" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.72797745" visible="true" weight="0.18956044" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -270,63 +288,93 @@
       <configuration name="JavascriptDebugType">
         <watch expression="lenmap" language="JavaScript" />
         <watch expression="cnt" language="JavaScript" />
+        <watch expression="lenmap[i][j].id" />
+        <watch expression="(j + l / g) % l" />
+        <watch expression="test" language="HTML" />
+        <watch expression="x" language="HTML" />
+        <watch expression="check" language="JavaScript" />
+        <watch expression="ret" language="JavaScript" />
+        <watch expression="check.step" />
+        <watch expression="myCube" language="JavaScript" />
+        <watch expression="this.cnt" />
+        <watch expression="this" language="JavaScript" />
+        <watch expression="move" language="JavaScript" />
+        <watch expression="q1.length" language="JavaScript" />
+        <watch expression="q2.length" language="JavaScript" />
+        <watch expression="ret" language="JavaScript" />
+        <watch expression="ret[4].join(' ')" language="JavaScript" />
+        <watch expression="mySol[this.label].firstElementChild.firstElementChild.value" />
+        <watch expression="mySol[this.label].body.firstElementChild.firstElementChild.value" />
+        <watch expression="samp.initState" language="JavaScript" />
+        <watch expression="sol.got[i]" />
+        <watch expression="sol.got[i].join(' ')" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>cnt</expression-string>
+        <expression-string>samp.initState</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>lenmap</expression-string>
+        <expression-string>ret[4].join(' ')</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.moveData</expression-string>
+        <expression-string>ret[3].join(' ')</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>face instanceof Face4</expression-string>
+        <expression-string>ret[2].join(' ')</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>mat</expression-string>
+        <expression-string>ret[1].join(' ')</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dic[[n,0,0]]</expression-string>
-        <language-id>HTML</language-id>
+        <expression-string>ret[0].join(' ')</expression-string>
+        <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Rubik.pieces</expression-string>
-        <language-id>HTML</language-id>
+        <expression-string>ret</expression-string>
+        <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Rubik.pieces[4]</expression-string>
-        <language-id>HTML</language-id>
+        <expression-string>q1</expression-string>
+        <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Rubik.pieces[0]</expression-string>
-        <language-id>HTML</language-id>
+        <expression-string>q2.length</expression-string>
+        <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dic[[1, 0, 0]]</expression-string>
+        <expression-string>q1.length</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>alert(samp.initState)</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>text.split(' ')</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>cube.pieces[0].rotation</expression-string>
         <language-id>JavaScript</language-id>
@@ -362,16 +410,6 @@
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>ShowObjProperty(cube.pieces[0])</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ShowObjProperty(cube.pieces[i])</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
@@ -393,34 +431,48 @@
     <entry file="file://$PROJECT_DIR$/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.js">
+    <entry file="https://cdn.bootcss.com/jquery/2.1.1/jquery.js">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="6258" selection-start-line="6258" selection-end-line="6258" />
+        <state relative-caret-position="117">
+          <caret line="404" column="4" selection-start-line="404" selection-start-column="4" selection-end-line="404" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
-          <caret line="4624" column="4" selection-start-line="4624" selection-start-column="4" selection-end-line="4624" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="https://cdn.bootcss.com/jquery/2.1.1/jquery.js">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/construct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="286" column="21" lean-forward="true" selection-start-line="286" selection-start-column="21" selection-end-line="286" selection-end-column="21" />
+          <caret line="10280" column="13" selection-start-line="10280" selection-start-column="13" selection-end-line="10280" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+        <state relative-caret-position="415">
+          <caret line="47" column="84" lean-forward="true" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/construct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1118">
+          <caret line="249" column="21" lean-forward="true" selection-start-line="249" selection-start-column="21" selection-end-line="249" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="22503" selection-start-line="22503" selection-end-line="22503" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/solver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
         </state>
       </provider>
     </entry>

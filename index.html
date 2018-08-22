@@ -8,6 +8,7 @@
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="js/three.js"></script>
     <script src="js/construct.js"></script>
+    <script src="js/solver.js"></script>
 </head>
 
 <body>
@@ -37,6 +38,18 @@
                     <li><a href="#" onclick="addPyra()">金字塔魔方</a></li>
                 </ul>
             </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">解法助手 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+
+                    <li><a href="#" onclick="addSolver('222')">二阶魔方 一次性求解</a></li>
+                    <li><a href="#" onclick="addSolver('222face')">二阶魔方 面先法</a></li>
+
+                </ul>
+            </li>
+
         </ul>
     </div><!-- /.container-fluid -->
 </nav>
@@ -45,17 +58,28 @@
 <br>
 <br>
 <br>
-<div class="container-fluid" id = 'container'>
+<div class="row">
+    <div class="col-md-6">
+        <div class="container-fluid" id='container'>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container-fluid" id='container2'>
 
+        </div>
+    </div>
 </div>
 
 <script>
+    //test = solve([1, 2], [[2, 1]], {'M': {0: 1, 1: 0}});
     let cnt = 0;
+    let cntS = 0;
     let Rubik = NewCube(3);
     displayCube(Rubik);
-
     let myCube = [Rubik];
+    let mySol = [];
 </script>
+
 </body>
 
 </html>
