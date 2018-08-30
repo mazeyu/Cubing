@@ -22,7 +22,7 @@ function solve(curSet, aimSet, moveSet, num) {
     if (num === undefined) num = 1;
     for (let i of aimSet) {
         for (let j of curSet) {
-            if (j == i) return [[]];
+            if (j.toString() === i.toString()) return [[]];
         }
     }
     let inverseSet = {};
@@ -89,14 +89,44 @@ function solve(curSet, aimSet, moveSet, num) {
     return ret;
 }
 
+function addView(sol) {
+    sol.camera = new THREE.PerspectiveCamera(55, 1.25, 0.1, 1000);
+    sol.renderer = new THREE.WebGLRenderer();
+    sol.renderer.setSize(250, 200);
+    sol.camera.position = new THREE.Vector3(0, -2, 2);
+    sol.camera.rotation.x = 1;
+    sol.scene = new THREE.Scene();
+
+    let cube = sol.cube;
+    for (let piece of cube.pieces) {
+        sol.scene.add(piece);
+    }
+
+    sol.render = function () {
+        requestAnimationFrame(sol.render);
+        for (let piece of cube.pieces) {
+            piece.children[0].geometry.verticesNeedUpdate = true;
+            piece.children[1].geometry.verticesNeedUpdate = true;
+        }
+        sol.cube.dMove();
+        sol.renderer.render(sol.scene, sol.camera);
+    };
+    sol.render();
+}
+
 function clickSol() {
     let text = mySol[this.label].body.firstElementChild.firstElementChild.value;
     let sol = mySol[this.label][0];
 
     if (text === '') sol.scram = [];
     else sol.scram = text.split(' ');
+    sol.cube.reset();
+    sol.cube.moveList = sol.scram;
 
     if (sol.button === undefined) {
+
+        addView(sol);
+        mySol[this.label].body.appendChild(sol.renderer.domElement);
         mySol[this.label].body.insertAdjacentHTML('beforeEnd',
             '<HR>' +
             '<button class = \'btn-primary btn-lg btn-block\' ' +
@@ -137,16 +167,39 @@ function clickSolve() {
         newItem.textContent = sol.got[i].join(' ');
         newItem.lab = this.label;
         newItem.stage = this.stage;
-        //newItem.index = i;
         newItem.onclick = chooseSol;
     }
 
 }
 
 function chooseSol() {
+    let sol;
+    if (mySol[this.lab].length === this.stage + 1) {
+        sol = mySol[this.lab];
+        if (mySol[this.lab].renderer === undefined) {
+            addView(sol);
+            mySol[this.lab].body.appendChild(sol.renderer.domElement);
+        }
+    }
+
+    else sol = mySol[this.lab][this.stage + 1];
+
+    sol.cube.reset();
+
+    for (let i = 0; i <= this.stage; i++) {
+        for (let move of mySol[this.lab][i].scram) {
+            sol.cube.move0(move, 1);
+        }
+    }
+    if (this.textContent !== '') sol.cube.moveList = sol.cube.moveList.concat(this.textContent.split(' '));
+
     if (mySol[this.lab].length <= this.stage + 1) return;
-    let sol = mySol[this.lab][this.stage + 1];
+
     if (sol.button === undefined) {
+
+        addView(sol);
+        mySol[this.lab].body.appendChild(sol.renderer.domElement);
+
         mySol[this.lab].body.insertAdjacentHTML('beforeEnd',
             '<HR>' +
             '<button class = \'btn-primary btn-lg btn-block\' ' +
@@ -158,9 +211,10 @@ function chooseSol() {
         sol.button.stage = this.stage + 1;
         sol.button.label = this.lab;
         sol.button.onclick = clickSolve;
-        if (this.textContent === '') sol.scram = [];
-        else sol.scram = this.textContent.split(' ');
+
     }
+    if (this.textContent === '') sol.scram = [];
+    else sol.scram = this.textContent.split(' ');
 }
 
 function addSolver(type) {
@@ -173,7 +227,12 @@ function addSolver(type) {
     if (type === '222face') {
         sol = New222FaceFirst();
     }
-
+    if (type === '333cfop') {
+        sol = NewCFOP();
+    }
+    if (type === 'pyra') {
+        sol = NewPyraminxSolution();
+    }
 
     document.getElementById('container2').insertAdjacentHTML("beforeEnd",
         "<div class = 'panel panel-success'>" +
@@ -204,24 +263,73 @@ function addSolver(type) {
 
 class solver {
     constructor() {
-        this.stages = {};
+        this.aimSet = [];
+        this.initialCopy = [];
+        this.initial = [];
+    }
+
+    push(samp, symm) {
+
+        let state = samp.initState;
+        let set = [[], ['y'], ['y2'], ['y\''], ['z'], ['z\'']];
+        let set1 = [];
+        if (symm === 24) {
+            for (let x of set) {
+                set1.push(x);
+                set1.push(['x'].concat(x));
+                set1.push(['x2'].concat(x));
+                set1.push(['x\''].concat(x));
+            }
+            set = set1;
+        }
+        else if (symm === 4) {
+            set = [['y'], ['y2'], ['y\''], []];
+        }
+        else if (symm === 1) set = [[]];
+        for (let x of set) {
+            let state1 = copy(state);
+            for (let i of x)
+                state1 = afterPerm(state1, samp.permutation[i]);
+            this.aimSet.push(copy(state1));
+            this.initialCopy.push(copy(state1));
+            this.initial.push(copy(state1));
+        }
     }
 }
 
 function New222Solution() {
     let sol = new solver();
-    sol.aimSet = [];
     let samp = NewCube(2);
     let fin = samp.initState;
     sol.initialCopy = [fin];
     sol.initial = [fin];
-    sol.aimSet.push(fin);
+    sol.aimSet = [fin];
     sol.moveSet = {};
     for (let i of ['R', 'R2', 'R\'', 'U', 'U\'', 'U2', 'F', 'F\'', 'F2']) {
         sol.moveSet[i] = samp.permutation[i];
     }
+    sol.cube = NewCube(2);
     let solution = [sol];
+    solution.cube = NewCube(2);
     solution.name = '二阶魔方直接求解';
+    return solution;
+}
+
+function NewPyraminxSolution() {
+    let sol = new solver();
+    let samp = NewPyramix();
+    let fin = samp.initState;
+    sol.initialCopy = [fin];
+    sol.initial = [fin];
+    sol.aimSet = [fin];
+    sol.moveSet = {};
+    for (let i of ['R', 'R\'', 'U', 'U\'', 'B', 'B\'', 'L', 'L\'']) {
+        sol.moveSet[i] = samp.permutation[i];
+    }
+    sol.cube = NewPyramix();
+    let solution = [sol];
+    solution.cube = NewPyramix();
+    solution.name = '金字塔魔方直接求解';
     return solution;
 }
 
@@ -236,56 +344,121 @@ function copy(arr) {
 function New222FaceFirst() {
     let samp = NewCube(2);
 
-    let sol3 = new solver();
-    let fin = samp.initState;
-    sol3.initialCopy = [copy(fin)];
-    sol3.initial = [copy(fin)];
-    sol3.aimSet = [copy(fin)];
-
-    let sol = new solver();
-    sol.aimSet = [];
-    sol.initialCopy = [];
-    sol.initial = [];
-    for (let i = -1; i <= 1; i++)
-        for (let j = -1; j <= 1; j++)
-            for (let k = -1; k <= 1; k++)
-                if (i * i + j * j + k * k === 1) {
-                    for (let f in samp.initState) {
-                        samp.initState[f] = 0;
-                    }
-                    samp.fill(i, j, k, 1 / 2, white);
-                    sol.aimSet.push(copy(samp.initState));
-                    sol.initialCopy.push(copy(samp.initState));
-                    sol.initial.push(copy(samp.initState));
-                }
-
-    sol.moveSet = {};
+    let finish = new solver();
+    finish.push(samp, 1);
+    let first_face = new solver();
+    for (let f in samp.initState)
+        samp.initState[f] = 0;
+    samp.fill(0, 0, 1, - 1 / 2, white);
+    first_face.push(samp, 1);
+    first_face.moveSet = {};
     for (let i of ['R', 'R2', 'R\'', 'U', 'U\'', 'U2', 'F', 'F\'', 'F2']) {
-        sol.moveSet[i] = samp.permutation[i];
+        first_face.moveSet[i] = samp.permutation[i];
+    }
+    let two_face = new solver();
+    samp.fill(0, 0, 1, 1 / 2, yellow);
+    two_face.push(samp, 1);
+    two_face.moveSet = first_face.moveSet;
+    finish.moveSet = first_face.moveSet;
+    first_face.cube = NewCube(2);
+    two_face.cube = NewCube(2);
+    finish.cube = NewCube(2);
+    let solution = [first_face, two_face, finish];
+    solution.cube = NewCube(2);
+    solution.name = '二阶魔方面先法';
+    return solution;
+}
+
+function NewCFOP() {
+    let samp = NewCube(3);
+    let finish = new solver();
+    finish.push(samp, 1);
+    let statecopy = copy(samp.initState);
+
+    let cross = new solver();
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (centroid.z > -1 / 6 || (Math.abs(centroid.y * centroid.x) > 0.00001)) {
+            samp.initState[i] = 0;
+        }
+    }
+    cross.push(samp, 1);
+
+    cross.moveSet = {};
+    for (let i of ['R', 'R2', 'R\'', 'U', 'U\'', 'U2', 'F', 'F\'', 'F2', 'L', 'L\'', 'L2', 'D', 'D\'', 'D2', 'B', 'B\'', 'B2']) {
+        cross.moveSet[i] = samp.permutation[i];
     }
 
-    let sol2 = new solver();
-    sol2.aimSet = [];
-    sol2.initialCopy = [];
-    sol2.initial = [];
-    for (let i = 0; i <= 1; i++)
-        for (let j = 0; j <= 1; j++)
-            for (let k = 0; k <= 1; k++)
-                if (i + j + k === 1) {
-                    for (let f in samp.initState) {
-                        samp.initState[f] = 0;
-                    }
-                    samp.fill(i, j, k, 1 / 2, white);
-                    samp.fill(i, j, k, - 1 / 2, yellow);
-                    sol2.aimSet.push(copy(samp.initState));
-                    sol2.initialCopy.push(copy(samp.initState));
-                    sol2.initial.push(copy(samp.initState));
-                }
+    cross.cube = NewCube(3);
 
-    sol2.moveSet = sol.moveSet;
-    sol3.moveSet = sol.moveSet;
+    let f2l1 = new solver();
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (centroid.z < 1 / 6 && centroid.x + centroid.y > 1 / 3) {
+            samp.initState[i] = statecopy[i];
+        }
+    }
+    f2l1.push(samp, 4);
+    f2l1.cube = NewCube(3);
+    f2l1.moveSet = cross.moveSet;
 
-    let solution = [sol, sol2, sol3];
-    solution.name = '二阶魔方面先法';
+    let f2l2 = new solver();
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (centroid.z < 1 / 6 && centroid.x + centroid.y < -1 / 3) {
+            samp.initState[i] = statecopy[i];
+        }
+    }
+    f2l2.push(samp, 4);
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (centroid.z < 1 / 6 && centroid.x + centroid.y < -1 / 3) {
+            samp.initState[i] = 0;
+        }
+        if (centroid.z < 1 / 6 && centroid.x - centroid.y < -1 / 3) {
+            samp.initState[i] = statecopy[i];
+        }
+    }
+    f2l2.push(samp, 4);
+    f2l2.cube = NewCube(3);
+    f2l2.moveSet = cross.moveSet;
+
+    let f2l3 = new solver();
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (centroid.z < 1 / 6 && centroid.x + centroid.y < -1 / 3) {
+            samp.initState[i] = statecopy[i];
+        }
+    }
+    f2l3.push(samp, 4);
+    f2l3.cube = NewCube(3);
+    f2l3.moveSet = cross.moveSet;
+
+    let f2l4 = new solver();
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (centroid.z < 1 / 6 && -centroid.x + centroid.y < -1 / 3) {
+            samp.initState[i] = statecopy[i];
+        }
+    }
+    f2l4.push(samp, 1);
+    f2l4.cube = NewCube(3);
+    f2l4.moveSet = cross.moveSet;
+
+    let oll = new solver();
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (Math.abs(centroid.z - 1 / 2) < 0.001) {
+            samp.initState[i] = statecopy[i];
+        }
+    }
+    oll.push(samp, 1);
+    oll.cube = NewCube(3);
+    oll.moveSet = cross.moveSet;
+
+
+    let solution = [cross, f2l1, f2l2, f2l3, f2l4, oll];
+    solution.cube = NewCube(3);
+    solution.name = '三阶魔方CFOP';
     return solution;
 }

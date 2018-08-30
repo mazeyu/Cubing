@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/construct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/solver.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/solver.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -12,6 +14,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Cubing$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1535560858249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="276938071">
@@ -29,6 +34,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="103" value="1" />
+          <entry key="1412" value="1" />
           <entry key="198" value="1" />
           <entry key="246" value="1" />
           <entry key="2785" value="1" />
@@ -39,28 +45,28 @@
           <entry key="60" value="1" />
           <entry key="75" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="35" />
+          <entry key="js" value="45" />
           <entry key="ts" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="45" />
+          <entry key="JavaScript" value="56" />
           <entry key="TypeScript" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2439" />
-          <entry key="js" value="16479" />
+          <entry key="html" value="2469" />
+          <entry key="js" value="19255" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2462" />
-          <entry key="JavaScript" value="16456" />
+          <entry key="HTML" value="2492" />
+          <entry key="JavaScript" value="19232" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -68,11 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+            <state relative-caret-position="302">
+              <caret line="48" column="72" lean-forward="true" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -80,17 +86,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/construct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1118">
-              <caret line="249" column="21" lean-forward="true" selection-start-line="249" selection-start-column="21" selection-end-line="249" selection-end-column="21" />
+            <state relative-caret-position="1481">
+              <caret line="186" column="31" lean-forward="true" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/solver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="251" column="50" lean-forward="true" selection-start-line="251" selection-start-column="50" selection-end-line="251" selection-end-column="50" />
+            <state relative-caret-position="267">
+              <caret line="325" column="65" selection-start-line="325" selection-start-column="65" selection-end-line="325" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -117,7 +123,11 @@
       <find>cnt</find>
       <find>add2</find>
       <find>solve</find>
+      <find>render</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,8 +139,8 @@
         <option value="$PROJECT_DIR$/js/a.js" />
         <option value="$PROJECT_DIR$/js/three.js" />
         <option value="$PROJECT_DIR$/js/construct.js" />
-        <option value="$PROJECT_DIR$/js/solver.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/solver.js" />
       </list>
     </option>
   </component>
@@ -231,7 +241,7 @@
       <workItem from="1534688060066" duration="11524000" />
       <workItem from="1534751772531" duration="18194000" />
       <workItem from="1534838928158" duration="59000" />
-      <workItem from="1534839070193" duration="18191000" />
+      <workItem from="1534839070193" duration="42408000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -244,26 +254,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122784000" />
+    <option name="totallyTimeSpent" value="147001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11698379" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11874106" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.27202255" side_tool="true" visible="true" weight="0.18956044" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.2732475" side_tool="true" visible="true" weight="0.29395604" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.72797745" visible="true" weight="0.18956044" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.32967034" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.7267525" visible="true" weight="0.29395604" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -280,6 +291,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="pyra added" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/construct.js</url>
+          <line>311</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="lenmap" language="JavaScript" />
@@ -304,58 +325,69 @@
         <watch expression="samp.initState" language="JavaScript" />
         <watch expression="sol.got[i]" />
         <watch expression="sol.got[i].join(' ')" />
+        <watch expression="samp.pieces[1].children[0].geometry.faces[0].centroid" language="JavaScript" />
+        <watch expression="x" language="JavaScript" />
+        <watch expression="samp" language="JavaScript" />
+        <watch expression="samp.centers" language="JavaScript" />
+        <watch expression="i" language="JavaScript" />
+        <watch expression="i[0]" language="JavaScript" />
+        <watch expression="i.split(',')[0]" />
+        <watch expression="i" language="JavaScript" />
+        <watch expression="this.permutation['x']" language="JavaScript" />
+        <watch expression="samp.permutation['y']" language="JavaScript" />
+        <watch expression="samp.permutation[i]" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
+        <expression-string>samp.permutation['y']</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samp.permutation['x']</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.permutation['x']</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i[0]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samp.centers</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samp</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>x</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>samp.pieces[1].children[0].geometry.faces[0].centroid</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>samp.initState</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ret[4].join(' ')</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ret[3].join(' ')</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ret[2].join(' ')</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ret[1].join(' ')</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ret[0].join(' ')</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ret</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>q1</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>q2.length</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>q1.length</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -411,9 +443,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/a.js" />
     <entry file="file://$PROJECT_DIR$/js/b.js" />
-    <entry file="http://localhost:63342/Cubing/js/construct.js">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
     <entry file="http://localhost:63342/Cubing/js/three.js">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
@@ -426,9 +455,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="https://cdn.bootcss.com/jquery/2.1.1/jquery.js">
-      <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -444,12 +470,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/construct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1118">
-          <caret line="249" column="21" lean-forward="true" selection-start-line="249" selection-start-column="21" selection-end-line="249" selection-end-column="21" />
-        </state>
-      </provider>
+    <entry file="http://localhost:63342/Cubing/js/construct.js">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="https://cdn.bootcss.com/jquery/2.1.1/jquery.js">
+      <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/three.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -458,17 +483,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/solver.js">
+    <entry file="http://localhost:63342/Cubing/js/solver.js">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="251" column="50" lean-forward="true" selection-start-line="251" selection-start-column="50" selection-end-line="251" selection-end-column="50" />
+        <state relative-caret-position="1481">
+          <caret line="186" column="31" lean-forward="true" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+        <state relative-caret-position="302">
+          <caret line="48" column="72" lean-forward="true" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/solver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="325" column="65" selection-start-line="325" selection-start-column="65" selection-end-line="325" selection-end-column="65" />
         </state>
       </provider>
     </entry>

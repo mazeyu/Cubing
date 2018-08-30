@@ -21,13 +21,43 @@ function cross(a, b) {
 }
 
 class Tcube {
+    reset() {
+        let v = this.restorev;
+        let f = this.restoref;
+        for (let i = 0; i < f.length; i++) {
+            let face = f[i];
+            let abcd = [];
+            let geo = this.pieces[i].children[0].geometry;
+            if (face instanceof THREE.Face4) {
+                abcd = [face.a, face.b, face.c, face.d];
+            }
+            else if (face instanceof THREE.Face3) {
+                abcd = [face.a, face.b, face.c];
+            }
+            for (let j = 0; j < abcd.length; j++) {
+                let a = abcd[j];
+                geo.vertices[j] = new THREE.Vector3(v[a].x, v[a].y, v[a].z);
+            }
+            geo.computeCentroids();
+            let centroid = geo.faces[0].centroid;
+            for (let v of geo.vertices) {
+                v.sub(v, centroid);
+                v.multiplyScalar(0.9);
+                v.add(v, centroid);
+            }
+        }
+    }
+
     constructor(v, f) {
+        this.restorev = v;
+        this.restoref = f;
         this.initState = [];
         this.pieces = [];
         this.moveData = {};
         this.permutation = {};
         this.moveList = [];
         this.currentMove = {move: '', prog: 0};
+        this.centers = [];
         for (let face of f) {
             let geo = new THREE.Geometry();
             let mat = [new THREE.MeshBasicMaterial({color: 0}),
@@ -47,6 +77,7 @@ class Tcube {
             }
             geo.computeCentroids();
             let centroid = geo.faces[0].centroid;
+
             for (let v of geo.vertices) {
                 v.sub(v, centroid);
                 v.multiplyScalar(0.9);
@@ -55,13 +86,13 @@ class Tcube {
             let mesh = THREE.SceneUtils.createMultiMaterialObject(geo, mat);
             //mesh.children[1].material.wireframeLinewidth = 10;
             this.pieces.push(mesh);
+            this.centers.push(centroid);
         }
     }
 
     fill(x, y, z, v, c) {
         for (let i = 0; i < this.pieces.length; i++) {
-            this.pieces[i].children[0].geometry.computeCentroids();
-            let cal = this.pieces[i].children[0].geometry.faces[0].centroid.dot(new THREE.Vector3(x, y, z));
+            let cal = this.centers[i].dot(new THREE.Vector3(x, y, z));
             if (Math.abs(cal - v) < 0.0001) {
                 let mat = new THREE.MeshBasicMaterial({color: c});
                 mat.side = THREE.DoubleSide;
@@ -71,13 +102,7 @@ class Tcube {
         }
     }
 
-    dMove(gra) {
-        if (this.currentMove.prog === 0) {
-            if (this.moveList.length === 0) return;
-            this.currentMove = {move: this.moveList[0], prog: gra};
-            this.moveList = this.moveList.slice(1,);
-        }
-        let move = this.currentMove.move;
+    move0(move, gra) {
         let x = this.moveData[move].x;
         let y = this.moveData[move].y;
         let z = this.moveData[move].z;
@@ -99,6 +124,17 @@ class Tcube {
                 }
             }
         }
+    }
+    dMove() {
+        let gra = 20;
+        if (this.gra !== undefined) gra = this.gra;
+        if (this.currentMove.prog === 0) {
+            if (this.moveList.length === 0) return;
+            this.currentMove = {move: this.moveList[0], prog: gra};
+            this.moveList = this.moveList.slice(1,);
+        }
+        let move = this.currentMove.move;
+        this.move0(move, gra);
         this.currentMove.prog -= 1;
     }
 
@@ -118,13 +154,13 @@ class Tcube {
                 centroid.subSelf(this.center);
                 let vec = new THREE.Vector3();
                 vec.cross(centroid, new THREE.Vector3(x, y, z));
-                pieces.push({len: vec.length(), v: vec, id: i});
+                pieces.push({len: vec.length(), dep: centroid.dot(new THREE.Vector3(x, y, z)), v: vec, id: i});
             }
         }
         pieces.sort((a, b) => a.len - b.len);
         let lenmap = {};
         for (let piece of pieces) {
-            let piecelen = Math.round(piece.len * 1000);
+            let piecelen = [Math.round(piece.len * 1000), Math.round(piece.dep * 1000)];
             if (piecelen in lenmap) {
                 lenmap[piecelen].push(piece);
                 let cos = piece.v.dot(lenmap[piecelen][0].v);
@@ -147,24 +183,21 @@ class Tcube {
             if (b === 0) return a;
             return gcd(b, a % b);
         }
-
-        if (g === undefined) {
-            g = 0;
-            for (let i in lenmap) {
-                if (i != 0) {
-                    lenmap[i].sort((a, b) => a.angle - b.angle);
-                    g = gcd(g, lenmap[i].length);
-                }
+        let myg = 0;
+        for (let i in lenmap) {
+            if (i.split(',')[0] != 0) {
+                lenmap[i].sort((a, b) => a.angle - b.angle);
+                myg = gcd(myg, lenmap[i].length);
             }
-
         }
+        if (g === undefined) g = myg;
         let tot = this.pieces.length;
         this.permutation[move] = [];
         this.permutation[move + '2'] = [];
         this.permutation[move + '\''] = [];
         this.permutation[move + '\'2'] = [];
         for (let i in lenmap) {
-            if (i == 0) {
+            if (i.split(',')[0] == 0) {
                 for (let x of lenmap[i]) {
                     this.permutation[move][x.id] = x.id;
                     this.permutation[move + '2'][x.id] = x.id;
@@ -274,6 +307,11 @@ function NewCube(n) {
     cube.addmove(0, -1, 0, thre - 1 / n, 'f');
     cube.addmove(0, 1, 0, thre - 1 / n, 'b');
 
+    cube.addmove(1, 0, 0, -999, 'x', 999, 4);
+    cube.addmove(0, 0, 1, -999, 'y', 999, 4);
+    cube.addmove(0, -1, 0, -999, 'z', 999, 4);
+
+
     let chara = ['二', '三', '四', '五', '六', '七'];
     cube.name = chara[n - 2] + '阶魔方';
     return cube;
@@ -346,7 +384,7 @@ function displayCube(cube) {
             piece.children[0].geometry.verticesNeedUpdate = true;
             piece.children[1].geometry.verticesNeedUpdate = true;
         }
-        cube.dMove(20);
+        cube.dMove();
         cube.renderer.render(cube.scene, cube.camera);
     };
 
