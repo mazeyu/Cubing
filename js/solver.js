@@ -147,7 +147,7 @@ function clickSolve() {
     for (let copy of sol.initialCopy) {
         for (let i = 0; i <= this.stage; i++) {
             for (let move of mySol[this.label][i].scram) {
-                copy = afterPerm(copy, mySol[this.label][Math.max(i - 1, 0)].moveSet[move]);
+                copy = afterPerm(copy, mySol[this.label].cube.permutation[move]);
             }
         }
         sol.initial.push(copy);
@@ -232,6 +232,9 @@ function addSolver(type) {
     }
     if (type === 'pyra') {
         sol = NewPyraminxSolution();
+    }
+    if (type === '555') {
+        sol = New555Solution();
     }
 
     document.getElementById('container2').insertAdjacentHTML("beforeEnd",
@@ -460,5 +463,34 @@ function NewCFOP() {
     let solution = [cross, f2l1, f2l2, f2l3, f2l4, oll];
     solution.cube = NewCube(3);
     solution.name = '三阶魔方CFOP';
+    return solution;
+}
+
+function New555Solution() {
+    let samp = NewCube(5);
+
+    let finish = new solver();
+    finish.push(samp, 1);
+    let first_face = new solver();
+
+    for (let i = 0; i < samp.pieces.length; i++) {
+        let centroid = samp.centers[i];
+        if (Math.abs(centroid.z - 1 / 2) > 0.001 || centroid.x > 0.3 || centroid.y > 0.3 || centroid.x < -0.3 || centroid.y < -0.3) {
+            samp.initState[i] = 0;
+        }
+    }
+
+    first_face.push(samp, 6);
+    first_face.moveSet = {};
+    for (let i of ['R', 'R2', 'R\'', 'U', 'U\'', 'U2', 'F', 'F\'', 'F2','L', 'L2', 'L\'', 'D', 'D\'', 'D2', 'B', 'B\'', 'B2',
+        'r', 'r2', 'r\'', 'u', 'u\'', 'u2', 'f', 'f\'', 'f2','l', 'l2', 'l\'', 'd', 'd\'', 'd2', 'b', 'b\'', 'b2']) {
+        first_face.moveSet[i] = samp.permutation[i];
+    }
+
+    first_face.cube = NewCube(5);
+
+    let solution = [first_face];
+    solution.cube = NewCube(5);
+    solution.name = '五阶魔方';
     return solution;
 }

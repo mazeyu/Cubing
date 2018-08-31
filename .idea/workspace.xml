@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added" />
+    <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/solver.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/solver.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,13 +22,14 @@
     <session id="276938071">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,15 +59,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2469" />
-          <entry key="js" value="19255" />
+          <entry key="html" value="2484" />
+          <entry key="js" value="19441" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2492" />
-          <entry key="JavaScript" value="19232" />
+          <entry key="HTML" value="2507" />
+          <entry key="JavaScript" value="19418" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -73,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="48" column="72" lean-forward="true" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+            <state relative-caret-position="333">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -82,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/construct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1481">
-              <caret line="186" column="31" lean-forward="true" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+            <state relative-caret-position="437">
+              <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -91,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/solver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="325" column="65" selection-start-line="325" selection-start-column="65" selection-end-line="325" selection-end-column="65" />
+            <state relative-caret-position="188">
+              <caret line="487" column="5" selection-start-line="487" selection-start-column="5" selection-end-line="487" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -120,6 +125,7 @@
       <find>add2</find>
       <find>solve</find>
       <find>render</find>
+      <find>max</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -237,7 +243,8 @@
       <workItem from="1534688060066" duration="11524000" />
       <workItem from="1534751772531" duration="18194000" />
       <workItem from="1534838928158" duration="59000" />
-      <workItem from="1534839070193" duration="42499000" />
+      <workItem from="1534839070193" duration="42920000" />
+      <workItem from="1535684680376" duration="1471000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -250,14 +257,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147092000" />
+    <option name="totallyTimeSpent" value="148984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11874106" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.118393235" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.2732475" side_tool="true" visible="true" weight="0.29395604" />
@@ -266,14 +273,14 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.7267525" visible="true" weight="0.29395604" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.7267525" weight="0.29395604" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3297568" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +299,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/construct.js</url>
           <line>311</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="156" />
         </line-breakpoint>
       </breakpoints>
@@ -482,24 +488,24 @@
     <entry file="http://localhost:63342/Cubing/js/solver.js">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/construct.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1481">
-          <caret line="186" column="31" lean-forward="true" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+        <state relative-caret-position="333">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="48" column="72" lean-forward="true" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+        <state relative-caret-position="437">
+          <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/solver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="325" column="65" selection-start-line="325" selection-start-column="65" selection-end-line="325" selection-end-column="65" />
+        <state relative-caret-position="188">
+          <caret line="487" column="5" selection-start-line="487" selection-start-column="5" selection-end-line="487" selection-end-column="5" />
         </state>
       </provider>
     </entry>
