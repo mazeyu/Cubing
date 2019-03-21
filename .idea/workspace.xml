@@ -20,7 +20,7 @@
     <session id="276938071">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -60,48 +60,20 @@
         <counts>
           <entry key="html" value="2492" />
           <entry key="js" value="20093" />
-          <entry key="txt" value="15" />
+          <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2515" />
           <entry key="JavaScript" value="20070" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="PLAIN_TEXT" value="22" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/construct.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4828">
-              <caret line="284" column="45" lean-forward="true" selection-start-line="284" selection-start-column="45" selection-end-line="284" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/solver.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="154" column="62" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="154" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -134,8 +106,8 @@
       <find>len</find>
       <find>.a</find>
       <find>face4</find>
-      <find>.a,</find>
       <find>solve</find>
+      <find>.a,</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -258,7 +230,7 @@
       <workItem from="1536653512005" duration="509000" />
       <workItem from="1536853346813" duration="288000" />
       <workItem from="1544168988011" duration="47000" />
-      <workItem from="1553176563525" duration="6806000" />
+      <workItem from="1553176563525" duration="7041000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -274,11 +246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553181199885</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add pdf">
+      <created>1553185098986</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553185098986</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156832000" />
+    <option name="totallyTimeSpent" value="157067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,12 +270,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.118393235" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.118393235" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49964765" visible="true" weight="0.29936305" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49964765" visible="true" weight="0.29936305" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5003524" side_tool="true" visible="true" weight="0.29936305" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49753347" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -332,7 +310,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pyra added" />
     <MESSAGE value="skew added" />
-    <option name="LAST_COMMIT_MESSAGE" value="skew added" />
+    <MESSAGE value="add pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pdf" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -520,10 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/solver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+        <state relative-caret-position="-1299">
+          <caret line="143" column="23" lean-forward="true" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -534,10 +513,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/solver.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="154" column="62" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="154" selection-end-column="62" />
+        <state relative-caret-position="-170">
+          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
         </state>
       </provider>
     </entry>
