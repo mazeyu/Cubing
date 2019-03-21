@@ -230,6 +230,41 @@ let orange = 0xffa500;
 let white = 0xeeeeee;
 let yellow = 0xffff00;
 
+function NewSkew() {
+    let n = 1;
+    let v = new THREE.CubeGeometry(1, 1, 1, n, n, n).vertices;
+    let fs = new THREE.CubeGeometry(1, 1, 1, n, n, n).faces;
+    let finalF = [];
+    for (let f of fs) {
+        let cnt = v.length;
+        let abcd = [f.a, f.b, f.c, f.d];
+        for (let i = 0; i < 4; i++) {
+            let forward = (i + 1) % 4, backward = (i + 3) % 4;
+            v.push(vecMulScal(vecAddVec(v[abcd[i]], v[abcd[forward]]), 0.5));
+            finalF.push(new THREE.Face3(abcd[i], cnt + i, cnt + backward));
+        }
+        finalF.push(new THREE.Face4(cnt, cnt + 1, cnt + 2, cnt + 3));
+    }
+    let cube = new Tcube(v, finalF);
+    cube.fill(1, 0, 0, 1 / 2, red);
+    cube.fill(1, 0, 0, -1 / 2, orange);
+    cube.fill(0, 0, 1, 1 / 2, white);
+    cube.fill(0, 0, 1, -1 / 2, yellow);
+    cube.fill(0, 1, 0, 1 / 2, blue);
+    cube.fill(0, 1, 0, -1 / 2, green);
+
+    cube.addmove(1, 0, 0, -999, 'x', 999, 4);
+    cube.addmove(0, 0, 1, -999, 'y', 999, 4);
+    cube.addmove(0, -1, 0, -999, 'z', 999, 4);
+
+
+    cube.addmove(1, -1, -1, 0, 'R');
+    cube.addmove(-1, -1, 1, 0, 'L');
+
+    cube.name = "斜转魔方";
+    return cube
+}
+
 
 function NewPyramix() {
     let height = Math.sqrt(6) * 2 / 3;
@@ -275,6 +310,9 @@ function NewPyramix() {
     pyra.addmove(-ax13.x, -ax13.y, -ax13.z, height / 3, 'B');
     pyra.addmove(ax23.x, ax23.y, ax23.z, height / 3, 'R');
     pyra.addmove(0, 0, 1, height / 3, 'U');
+
+    pyra.addmove(ax23.x, ax23.y, ax23.z, -999, 'x', 999, 3);
+    pyra.addmove(0, 0, 1, -999, 'y', 999, 3);
     pyra.name = '金字塔魔方';
     return pyra;
 }
@@ -306,6 +344,13 @@ function NewCube(n) {
     cube.addmove(0, 0, -1, thre - 1 / n, 'd');
     cube.addmove(0, -1, 0, thre - 1 / n, 'f');
     cube.addmove(0, 1, 0, thre - 1 / n, 'b');
+
+    cube.addmove(1, 0, 0, thre - 2 / n, '3r');
+    cube.addmove(-1, 0, 0, thre - 2 / n, '3l');
+    cube.addmove(0, 0, 1, thre - 2 / n, '3u');
+    cube.addmove(0, 0, -1, thre - 2 / n, '3d');
+    cube.addmove(0, -1, 0, thre - 2 / n, '3f');
+    cube.addmove(0, 1, 0, thre - 2 / n, '3b');
 
     cube.addmove(1, 0, 0, -999, 'x', 999, 4);
     cube.addmove(0, 0, 1, -999, 'y', 999, 4);
@@ -402,5 +447,11 @@ function addPyra() {
     myCube.push(Pyra);
     displayCube(Pyra);
     Pyra.camera.position = new THREE.Vector3(1.5, -2, 2);
+}
+
+function addSkew() {
+    let Skew = NewSkew();
+    myCube.push(Skew);
+    displayCube(Skew);
 }
 
