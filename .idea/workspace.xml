@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="pyra added">
+    <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/construct.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,14 +60,14 @@
         <counts>
           <entry key="html" value="2492" />
           <entry key="js" value="20093" />
-          <entry key="txt" value="11" />
+          <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2515" />
           <entry key="JavaScript" value="20070" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
     </session>
@@ -85,20 +83,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/construct.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="302" column="37" lean-forward="true" selection-start-line="302" selection-start-column="37" selection-end-line="302" selection-end-column="37" />
+            <state relative-caret-position="4828">
+              <caret line="284" column="45" lean-forward="true" selection-start-line="284" selection-start-column="45" selection-end-line="284" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/solver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4394">
-              <caret line="299" column="5" lean-forward="true" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
+            <state relative-caret-position="258">
+              <caret line="154" column="62" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="154" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -124,7 +122,6 @@
       <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html lang\=\&quot;en\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\.0\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;bootstrap\-3\.3\.7\-dist\/css\/bootstrap\.min\.css\&quot;\&gt;\n    \&lt;script src\=\&quot;https\:\/\/cdn\.bootcss\.com\/jquery\/2\.1\.1\/jquery\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;bootstrap\-3\.3\.7\-dist\/js\/bootstrap\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/three\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/construct\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\n\&lt;nav class\=\&quot;navbar navbar\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n        \&lt;\!\-\- Brand and toggle get grouped for better mobile display \-\-\&gt;\n        \&lt;div class\=\&quot;navbar\-header\&quot;\&gt;\n            \&lt;a class\=\&quot;navbar\-brand\&quot; href\=\&quot;\#\&quot;\&gt;Cubing\&lt;\/a\&gt;\n        \&lt;\/div\&gt;\n\n        \&lt;\!\-\- Collect the nav links\, forms\, and other content for toggling \-\-\&gt;\n        \&lt;div class\=\&quot;collapse navbar\-collapse\&quot; id\=\&quot;bs\-example\-navbar\-collapse\-1\&quot;\&gt;\n            \&lt;ul class\=\&quot;nav navbar\-nav\&quot;\&gt;\n                \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                    \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                       aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                    \&lt;ul class\=\&quot;dropdown\-menu\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;三阶魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\n                            \&lt;a href\=\&quot;\#\&quot;\&gt;\n                        \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                        \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                           aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;li role\=\&quot;separator\&quot; class\=\&quot;divider\&quot;\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;金字塔魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/li\&gt;\n            \&lt;\/ul\&gt;\n        \&lt;\/div\&gt;\&lt;\!\-\- \/\.navbar\-collapse \-\-\&gt;\n    \&lt;\/div\&gt;\&lt;\!\-\- \/\.container\-fluid \-\-\&gt;\n\&lt;\/nav\&gt;\n\&lt;div class\=\&quot;panel panel\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;panel\-body\&quot; id\=\'1\'\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/div\&gt;\n\&lt;script\&gt;\n    let Rubik \= NewCube\(1\)\;\n\n    var camera \= new THREE\.PerspectiveCamera\(60\, 1\, 0\.1\, 1000\)\;\n    var renderer \= new THREE\.WebGLRenderer\(\)\;\n\n    renderer\.setSize\(500\, 500\)\;\n\n    document\.getElementById\(\'1\'\)\.appendChild\(renderer\.domElement\)\;\n\n    camera\.position \= new THREE\.Vector3\(0\, \-2\, 2\)\;\n    camera\.rotation\.x \= 1\;\n    var scene \= new THREE\.Scene\(\)\;\n    for \(let piece of Rubik\.pieces\) \{\n        scene\.add\(piece\)\;\n    \}\n    Rubik\.moveList \= \[\'R\'\, \'U\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\\\'\'\, \'F\'\, \'R2\'\, \'U\\\'\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\'\, \'U\'\, \'R\\\'\'\, \'F\\\'\'\]\;\n\n    function render\(\) \{\n        requestAnimationFrame\(render\)\;\n        for \(let piece of Rubik\.pieces\) \{\n            piece\.children\[0\]\.geometry\.verticesNeedUpdate \= true\;\n            piece\.children\[1\]\.geometry\.verticesNeedUpdate \= true\;\n        \}\n        Rubik\.dMove\(20\)\;\n        renderer\.render\(scene\, camera\)\;\n    \}\n\n    render\(\)\n\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
       <find>cnt</find>
       <find>add2</find>
-      <find>solve</find>
       <find>render</find>
       <find>max</find>
       <find>3</find>
@@ -137,6 +134,8 @@
       <find>len</find>
       <find>.a</find>
       <find>face4</find>
+      <find>.a,</find>
+      <find>solve</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -259,7 +258,7 @@
       <workItem from="1536653512005" duration="509000" />
       <workItem from="1536853346813" duration="288000" />
       <workItem from="1544168988011" duration="47000" />
-      <workItem from="1553176563525" duration="4147000" />
+      <workItem from="1553176563525" duration="6806000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -268,11 +267,27 @@
       <option name="project" value="LOCAL" />
       <updated>1534678613529</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="skew added">
+      <created>1553181199885</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553181199885</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154173000" />
+    <option name="totallyTimeSpent" value="156832000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -281,17 +296,17 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.118393235" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.27413672" side_tool="true" visible="true" weight="0.29299363" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49964765" visible="true" weight="0.29936305" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5003524" side_tool="true" visible="true" weight="0.29936305" />
+      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49753347" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.7258633" visible="true" weight="0.29299363" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.72445387" weight="0.49808916" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49964765" weight="0.3299363" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -301,12 +316,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pyra added" />
-    <option name="LAST_COMMIT_MESSAGE" value="pyra added" />
+    <MESSAGE value="skew added" />
+    <option name="LAST_COMMIT_MESSAGE" value="skew added" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -501,17 +527,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/solver.js">
+    <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4394">
-          <caret line="299" column="5" lean-forward="true" selection-start-line="299" selection-start-column="5" selection-end-line="299" selection-end-column="5" />
+        <state relative-caret-position="4828">
+          <caret line="284" column="45" lean-forward="true" selection-start-line="284" selection-start-column="45" selection-end-line="284" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/construct.js">
+    <entry file="file://$PROJECT_DIR$/js/solver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="302" column="37" lean-forward="true" selection-start-line="302" selection-start-column="37" selection-end-line="302" selection-end-column="37" />
+        <state relative-caret-position="258">
+          <caret line="154" column="62" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="154" selection-end-column="62" />
         </state>
       </provider>
     </entry>
