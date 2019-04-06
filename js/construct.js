@@ -366,6 +366,7 @@ function add2Move() {
     let text = document.getElementById('text' + this.label.toString()).value;
     if (text === '') return;
     for (let move of text.split(' ')) {
+        if (move === '') continue;
         myCube[this.label].moveList.push(move);
     }
 }

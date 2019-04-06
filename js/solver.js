@@ -159,7 +159,7 @@ function clickSolve() {
         newListGroup.className = "form-control";
         mySol[this.label].body.appendChild(newListGroup);
         sol.list = newListGroup;
-    }
+    }n
     sol.list.innerHTML = '';
     for (let i = 0; i < sol.got.length; i++) {
         let newItem = document.createElement('option');
