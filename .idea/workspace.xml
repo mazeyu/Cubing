@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="add pdf">
+    <list default="true" id="7788ea23-a5cd-478e-a18b-b54d9992d501" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/construct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/construct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/solver.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/solver.js" afterDir="false" />
     </list>
@@ -22,16 +23,19 @@
     <session id="276938071">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -48,29 +52,29 @@
           <entry key="60" value="1" />
           <entry key="75" value="1" />
           <entry key="html" value="2" />
-          <entry key="js" value="49" />
+          <entry key="js" value="52" />
           <entry key="ts" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="60" />
+          <entry key="JavaScript" value="63" />
           <entry key="TypeScript" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2492" />
-          <entry key="js" value="20118" />
-          <entry key="txt" value="22" />
+          <entry key="html" value="2529" />
+          <entry key="js" value="20123" />
+          <entry key="txt" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2515" />
-          <entry key="JavaScript" value="20095" />
-          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="HTML" value="2552" />
+          <entry key="JavaScript" value="20100" />
+          <entry key="PLAIN_TEXT" value="35" />
         </counts>
       </usages-collector>
     </session>
@@ -80,26 +84,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/solver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4952">
-              <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/construct.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="367" column="39" lean-forward="true" selection-start-line="367" selection-start-column="39" selection-end-line="367" selection-end-column="39" />
+            <state relative-caret-position="-3954">
+              <caret line="204" column="37" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/construct.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="372" column="9" selection-start-line="372" selection-start-column="9" selection-end-line="372" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="402">
+              <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -115,11 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>three</find>
-      <find>rotateby</find>
-      <find>setFromRotationMatrix</find>
-      <find>normalize</find>
-      <find>double</find>
       <find>compu</find>
       <find>jquery</find>
       <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html lang\=\&quot;en\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\.0\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;bootstrap\-3\.3\.7\-dist\/css\/bootstrap\.min\.css\&quot;\&gt;\n    \&lt;script src\=\&quot;https\:\/\/cdn\.bootcss\.com\/jquery\/2\.1\.1\/jquery\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;bootstrap\-3\.3\.7\-dist\/js\/bootstrap\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/three\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/construct\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\n\&lt;nav class\=\&quot;navbar navbar\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n        \&lt;\!\-\- Brand and toggle get grouped for better mobile display \-\-\&gt;\n        \&lt;div class\=\&quot;navbar\-header\&quot;\&gt;\n            \&lt;a class\=\&quot;navbar\-brand\&quot; href\=\&quot;\#\&quot;\&gt;Cubing\&lt;\/a\&gt;\n        \&lt;\/div\&gt;\n\n        \&lt;\!\-\- Collect the nav links\, forms\, and other content for toggling \-\-\&gt;\n        \&lt;div class\=\&quot;collapse navbar\-collapse\&quot; id\=\&quot;bs\-example\-navbar\-collapse\-1\&quot;\&gt;\n            \&lt;ul class\=\&quot;nav navbar\-nav\&quot;\&gt;\n                \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                    \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                       aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                    \&lt;ul class\=\&quot;dropdown\-menu\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;三阶魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\n                            \&lt;a href\=\&quot;\#\&quot;\&gt;\n                        \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                        \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                           aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;li role\=\&quot;separator\&quot; class\=\&quot;divider\&quot;\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;金字塔魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/li\&gt;\n            \&lt;\/ul\&gt;\n        \&lt;\/div\&gt;\&lt;\!\-\- \/\.navbar\-collapse \-\-\&gt;\n    \&lt;\/div\&gt;\&lt;\!\-\- \/\.container\-fluid \-\-\&gt;\n\&lt;\/nav\&gt;\n\&lt;div class\=\&quot;panel panel\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;panel\-body\&quot; id\=\'1\'\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/div\&gt;\n\&lt;script\&gt;\n    let Rubik \= NewCube\(1\)\;\n\n    var camera \= new THREE\.PerspectiveCamera\(60\, 1\, 0\.1\, 1000\)\;\n    var renderer \= new THREE\.WebGLRenderer\(\)\;\n\n    renderer\.setSize\(500\, 500\)\;\n\n    document\.getElementById\(\'1\'\)\.appendChild\(renderer\.domElement\)\;\n\n    camera\.position \= new THREE\.Vector3\(0\, \-2\, 2\)\;\n    camera\.rotation\.x \= 1\;\n    var scene \= new THREE\.Scene\(\)\;\n    for \(let piece of Rubik\.pieces\) \{\n        scene\.add\(piece\)\;\n    \}\n    Rubik\.moveList \= \[\'R\'\, \'U\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\\\'\'\, \'F\'\, \'R2\'\, \'U\\\'\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\'\, \'U\'\, \'R\\\'\'\, \'F\\\'\'\]\;\n\n    function render\(\) \{\n        requestAnimationFrame\(render\)\;\n        for \(let piece of Rubik\.pieces\) \{\n            piece\.children\[0\]\.geometry\.verticesNeedUpdate \= true\;\n            piece\.children\[1\]\.geometry\.verticesNeedUpdate \= true\;\n        \}\n        Rubik\.dMove\(20\)\;\n        renderer\.render\(scene\, camera\)\;\n    \}\n\n    render\(\)\n\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
@@ -141,6 +140,15 @@
       <find>.a,</find>
       <find>num</find>
       <find>split</find>
+      <find>4</find>
+      <find>progress</find>
+      <find>prog</find>
+      <find>n</find>
+      <find>5</find>
+      <find>pro</find>
+      <find>pr</find>
+      <find>mycube</find>
+      <find>gra</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -155,9 +163,9 @@
         <option value="$PROJECT_DIR$/js/b.js" />
         <option value="$PROJECT_DIR$/js/a.js" />
         <option value="$PROJECT_DIR$/js/three.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/solver.js" />
         <option value="$PROJECT_DIR$/js/construct.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -167,7 +175,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -178,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,7 +213,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,7 +275,14 @@
       <workItem from="1553185209577" duration="270000" />
       <workItem from="1553185721251" duration="196000" />
       <workItem from="1553186022898" duration="732000" />
-      <workItem from="1554549532303" duration="677000" />
+      <workItem from="1554549532303" duration="824000" />
+      <workItem from="1554551976495" duration="642000" />
+      <workItem from="1554553912510" duration="1404000" />
+      <workItem from="1554644470006" duration="1772000" />
+      <workItem from="1554701691180" duration="180000" />
+      <workItem from="1555148388213" duration="240000" />
+      <workItem from="1555421333491" duration="238000" />
+      <workItem from="1555501223989" duration="700000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -304,11 +319,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553186464854</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix space bug">
+      <created>1554550299524</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554550299524</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158942000" />
+    <option name="totallyTimeSpent" value="164265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,7 +342,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="799" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -328,12 +350,12 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49753347" weight="0.29808918" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5024665" side_tool="true" weight="0.29808918" />
-      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49753347" visible="true" weight="0.19377652" />
+      <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49753347" weight="0.1745223" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.32967034" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.72445387" weight="0.49808916" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.72445387" visible="true" weight="0.26624203" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49964765" weight="0.3299363" />
@@ -363,9 +385,26 @@
     <MESSAGE value="pyra added" />
     <MESSAGE value="skew added" />
     <MESSAGE value="add pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pdf" />
+    <MESSAGE value="fix space bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix space bug" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/solver.js</url>
+          <line>21</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/solver.js</url>
+          <line>88</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="lenmap" language="JavaScript" />
@@ -546,29 +585,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/three.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="25171" column="35" selection-start-line="25171" selection-start-column="35" selection-end-line="25171" selection-end-column="35" />
+        <state relative-caret-position="15">
+          <caret line="33109" column="43" selection-start-line="33109" selection-start-column="43" selection-end-line="33109" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/solver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4952">
-          <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="-3954">
+          <caret line="204" column="37" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="367" column="39" lean-forward="true" selection-start-line="367" selection-start-column="39" selection-end-line="367" selection-end-column="39" />
+        <state relative-caret-position="15">
+          <caret line="372" column="9" selection-start-line="372" selection-start-column="9" selection-end-line="372" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
         </state>
       </provider>
     </entry>

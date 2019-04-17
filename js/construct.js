@@ -126,7 +126,6 @@ class Tcube {
         }
     }
     dMove() {
-        let gra = 20;
         if (this.gra !== undefined) gra = this.gra;
         if (this.currentMove.prog === 0) {
             if (this.moveList.length === 0) return;

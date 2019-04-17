@@ -58,6 +58,17 @@
                 </ul>
             </li>
 
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">调节速度 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+
+                    <li><a href="#" onclick="gra = 4">快速</a></li>
+                    <li><a href="#" onclick="gra = 20">慢速</a></li>
+
+                </ul>
+            </li>
+
         </ul>
     </div><!-- /.container-fluid -->
 </nav>
@@ -82,11 +93,14 @@
     //test = solve([1, 2], [[2, 1]], {'M': {0: 1, 1: 0}});
     let cnt = 0;
     let cntS = 0;
+    let gra = 4;
     let Rubik = NewCube(3);
     Rubik.moveList = ['M2', 'U2', 'M2', 'U2', 'M2', 'U2', 'M2', 'U2'];
     displayCube(Rubik);
     let myCube = [Rubik];
     let mySol = [];
+
+
 </script>
 
 </body>
