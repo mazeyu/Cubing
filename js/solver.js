@@ -92,15 +92,16 @@ function solve(curSet, aimSet, moveSet, num) {
 function addView(sol) {
     sol.camera = new THREE.PerspectiveCamera(55, 1.25, 0.1, 1000);
     sol.renderer = new THREE.WebGLRenderer();
-    sol.renderer.setSize(250, 200);
-    sol.camera.position = new THREE.Vector3(0, -2, 2);
-    sol.camera.rotation.x = 1;
+    sol.renderer.setSize(500, 400);
+    // sol.camera.position = new THREE.Vector3(0, -2, 2);
+    // sol.camera.rotation.x = 1;
     sol.scene = new THREE.Scene();
 
     let cube = sol.cube;
     for (let piece of cube.pieces) {
         sol.scene.add(piece);
     }
+    sol.rotAngle = 0;
 
     sol.render = function () {
         requestAnimationFrame(sol.render);
@@ -108,6 +109,12 @@ function addView(sol) {
             piece.children[0].geometry.verticesNeedUpdate = true;
             piece.children[1].geometry.verticesNeedUpdate = true;
         }
+        if (enableRotation) {
+            sol.rotAngle += 0.01;
+        }
+        sol.camera.position = new THREE.Vector3(Math.sin(sol.rotAngle) * 2, -Math.cos(sol.rotAngle) * 2, 2);
+        sol.camera.up = new THREE.Vector3(0, 0, 1);
+        sol.camera.lookAt(new THREE.Vector3(0, 0, 0));
         sol.cube.dMove();
         sol.renderer.render(sol.scene, sol.camera);
     };

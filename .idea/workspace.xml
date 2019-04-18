@@ -32,10 +32,11 @@
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,29 +53,29 @@
           <entry key="60" value="1" />
           <entry key="75" value="1" />
           <entry key="html" value="2" />
-          <entry key="js" value="52" />
+          <entry key="js" value="59" />
           <entry key="ts" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="63" />
+          <entry key="JavaScript" value="70" />
           <entry key="TypeScript" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2529" />
-          <entry key="js" value="20123" />
-          <entry key="txt" value="35" />
+          <entry key="html" value="2608" />
+          <entry key="js" value="22519" />
+          <entry key="txt" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2552" />
-          <entry key="JavaScript" value="20100" />
-          <entry key="PLAIN_TEXT" value="35" />
+          <entry key="HTML" value="2631" />
+          <entry key="JavaScript" value="22496" />
+          <entry key="PLAIN_TEXT" value="62" />
         </counts>
       </usages-collector>
     </session>
@@ -84,26 +85,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/solver.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3954">
-              <caret line="204" column="37" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/construct.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="372" column="9" selection-start-line="372" selection-start-column="9" selection-end-line="372" selection-end-column="9" />
+            <state relative-caret-position="205">
+              <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/construct.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41">
+              <caret line="163" column="13" lean-forward="true" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+            <state relative-caret-position="103">
+              <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -119,17 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>compu</find>
-      <find>jquery</find>
-      <find>\&lt;\!DOCTYPE html\&gt;\n\&lt;html lang\=\&quot;en\&quot;\&gt;\n\&lt;head\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\.0\&quot;\&gt;\n    \&lt;link rel\=\&quot;stylesheet\&quot; href\=\&quot;bootstrap\-3\.3\.7\-dist\/css\/bootstrap\.min\.css\&quot;\&gt;\n    \&lt;script src\=\&quot;https\:\/\/cdn\.bootcss\.com\/jquery\/2\.1\.1\/jquery\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;bootstrap\-3\.3\.7\-dist\/js\/bootstrap\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/three\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;js\/construct\.js\&quot;\&gt;\&lt;\/script\&gt;\n\&lt;\/head\&gt;\n\n\&lt;body\&gt;\n\n\&lt;nav class\=\&quot;navbar navbar\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;container\-fluid\&quot;\&gt;\n        \&lt;\!\-\- Brand and toggle get grouped for better mobile display \-\-\&gt;\n        \&lt;div class\=\&quot;navbar\-header\&quot;\&gt;\n            \&lt;a class\=\&quot;navbar\-brand\&quot; href\=\&quot;\#\&quot;\&gt;Cubing\&lt;\/a\&gt;\n        \&lt;\/div\&gt;\n\n        \&lt;\!\-\- Collect the nav links\, forms\, and other content for toggling \-\-\&gt;\n        \&lt;div class\=\&quot;collapse navbar\-collapse\&quot; id\=\&quot;bs\-example\-navbar\-collapse\-1\&quot;\&gt;\n            \&lt;ul class\=\&quot;nav navbar\-nav\&quot;\&gt;\n                \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                    \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                       aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                    \&lt;ul class\=\&quot;dropdown\-menu\&quot;\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;三阶魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\n                            \&lt;a href\=\&quot;\#\&quot;\&gt;\n                        \&lt;li class\=\&quot;dropdown\&quot;\&gt;\n                        \&lt;a href\=\&quot;\#\&quot; class\=\&quot;dropdown\-toggle\&quot; data\-toggle\=\&quot;dropdown\&quot; role\=\&quot;button\&quot; aria\-haspopup\=\&quot;true\&quot;\n                           aria\-expanded\=\&quot;false\&quot;\&gt;添加魔方 \&lt;span class\=\&quot;caret\&quot;\&gt;\&lt;\/span\&gt;\&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;\/a\&gt;\n                        \&lt;\/li\&gt;\n                        \&lt;li role\=\&quot;separator\&quot; class\=\&quot;divider\&quot;\&gt;\&lt;\/li\&gt;\n                        \&lt;li\&gt;\&lt;a href\=\&quot;\#\&quot;\&gt;金字塔魔方\&lt;\/a\&gt;\&lt;\/li\&gt;\n                    \&lt;\/ul\&gt;\n                \&lt;\/li\&gt;\n            \&lt;\/ul\&gt;\n        \&lt;\/div\&gt;\&lt;\!\-\- \/\.navbar\-collapse \-\-\&gt;\n    \&lt;\/div\&gt;\&lt;\!\-\- \/\.container\-fluid \-\-\&gt;\n\&lt;\/nav\&gt;\n\&lt;div class\=\&quot;panel panel\-default\&quot;\&gt;\n    \&lt;div class\=\&quot;panel\-body\&quot; id\=\'1\'\&gt;\n\n    \&lt;\/div\&gt;\n\&lt;\/div\&gt;\n\&lt;script\&gt;\n    let Rubik \= NewCube\(1\)\;\n\n    var camera \= new THREE\.PerspectiveCamera\(60\, 1\, 0\.1\, 1000\)\;\n    var renderer \= new THREE\.WebGLRenderer\(\)\;\n\n    renderer\.setSize\(500\, 500\)\;\n\n    document\.getElementById\(\'1\'\)\.appendChild\(renderer\.domElement\)\;\n\n    camera\.position \= new THREE\.Vector3\(0\, \-2\, 2\)\;\n    camera\.rotation\.x \= 1\;\n    var scene \= new THREE\.Scene\(\)\;\n    for \(let piece of Rubik\.pieces\) \{\n        scene\.add\(piece\)\;\n    \}\n    Rubik\.moveList \= \[\'R\'\, \'U\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\\\'\'\, \'F\'\, \'R2\'\, \'U\\\'\'\, \'R\\\'\'\, \'U\\\'\'\, \'R\'\, \'U\'\, \'R\\\'\'\, \'F\\\'\'\]\;\n\n    function render\(\) \{\n        requestAnimationFrame\(render\)\;\n        for \(let piece of Rubik\.pieces\) \{\n            piece\.children\[0\]\.geometry\.verticesNeedUpdate \= true\;\n            piece\.children\[1\]\.geometry\.verticesNeedUpdate \= true\;\n        \}\n        Rubik\.dMove\(20\)\;\n        renderer\.render\(scene\, camera\)\;\n    \}\n\n    render\(\)\n\&lt;\/script\&gt;\n\&lt;\/body\&gt;\n\n\&lt;\/html\&gt;</find>
-      <find>cnt</find>
-      <find>add2</find>
-      <find>render</find>
-      <find>max</find>
-      <find>3</find>
-      <find>in</find>
-      <find>of</find>
-      <find>[]</find>
       <find>for</find>
       <find>appe</find>
       <find>size</find>
@@ -146,9 +136,20 @@
       <find>n</find>
       <find>5</find>
       <find>pro</find>
-      <find>pr</find>
       <find>mycube</find>
       <find>gra</find>
+      <find>render</find>
+      <find>solution</find>
+      <find>pr</find>
+      <find>length</find>
+      <find>reque</find>
+      <find>int</find>
+      <find>1000</find>
+      <find>150</find>
+      <find>100</find>
+      <find>10</find>
+      <find>99</find>
+      <find>reset</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -164,8 +165,8 @@
         <option value="$PROJECT_DIR$/js/a.js" />
         <option value="$PROJECT_DIR$/js/three.js" />
         <option value="$PROJECT_DIR$/js/solver.js" />
-        <option value="$PROJECT_DIR$/js/construct.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/construct.js" />
       </list>
     </option>
   </component>
@@ -186,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,6 +213,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,7 +283,8 @@
       <workItem from="1554701691180" duration="180000" />
       <workItem from="1555148388213" duration="240000" />
       <workItem from="1555421333491" duration="238000" />
-      <workItem from="1555501223989" duration="700000" />
+      <workItem from="1555501223989" duration="4069000" />
+      <workItem from="1555558749101" duration="11381000" />
     </task>
     <task id="LOCAL-00001" summary="pyra added">
       <created>1534678613529</created>
@@ -326,11 +328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554550299524</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix typo, add speed adjust">
+      <created>1555502021779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555502021779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164265000" />
+    <option name="totallyTimeSpent" value="179015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,7 +355,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2931642" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22551093" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49753347" weight="0.29808918" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5024665" side_tool="true" weight="0.29808918" />
@@ -355,7 +364,7 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49964765" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.32967034" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.72445387" visible="true" weight="0.26624203" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.72445387" visible="true" weight="0.45605096" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49964765" weight="0.3299363" />
@@ -386,65 +395,59 @@
     <MESSAGE value="skew added" />
     <MESSAGE value="add pdf" />
     <MESSAGE value="fix space bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix space bug" />
+    <MESSAGE value="fix typo, add speed adjust" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix typo, add speed adjust" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/solver.js</url>
-          <line>21</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/solver.js</url>
-          <line>88</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
+        <watch expression="notations[i]" language="JavaScript" />
+        <watch expression="n.dot(v0) - 0.1" language="JavaScript" />
         <watch expression="lenmap" language="JavaScript" />
-        <watch expression="cnt" language="JavaScript" />
-        <watch expression="lenmap[i][j].id" />
-        <watch expression="(j + l / g) % l" />
-        <watch expression="test" language="HTML" />
-        <watch expression="x" language="HTML" />
-        <watch expression="check" language="JavaScript" />
-        <watch expression="ret" language="JavaScript" />
-        <watch expression="check.step" />
-        <watch expression="myCube" language="JavaScript" />
-        <watch expression="this.cnt" />
-        <watch expression="this" language="JavaScript" />
-        <watch expression="move" language="JavaScript" />
-        <watch expression="q1.length" language="JavaScript" />
-        <watch expression="q2.length" language="JavaScript" />
-        <watch expression="ret" language="JavaScript" />
-        <watch expression="ret[4].join(' ')" language="JavaScript" />
-        <watch expression="mySol[this.label].firstElementChild.firstElementChild.value" />
-        <watch expression="mySol[this.label].body.firstElementChild.firstElementChild.value" />
-        <watch expression="samp.initState" language="JavaScript" />
-        <watch expression="sol.got[i]" />
-        <watch expression="sol.got[i].join(' ')" />
-        <watch expression="samp.pieces[1].children[0].geometry.faces[0].centroid" language="JavaScript" />
-        <watch expression="x" language="JavaScript" />
-        <watch expression="samp" language="JavaScript" />
-        <watch expression="samp.centers" language="JavaScript" />
-        <watch expression="i" language="JavaScript" />
-        <watch expression="i[0]" language="JavaScript" />
-        <watch expression="i.split(',')[0]" />
-        <watch expression="i" language="JavaScript" />
-        <watch expression="this.permutation['x']" language="JavaScript" />
-        <watch expression="samp.permutation['y']" language="JavaScript" />
-        <watch expression="samp.permutation[i]" />
+        <watch expression="pieces" language="JavaScript" />
+        <watch expression="this.center" language="JavaScript" />
+        <watch expression="centroid" language="JavaScript" />
+        <watch expression="this.pieces[i].children[0].geometry.faces[1].centroid" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>centroid</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.center</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pieces</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>lenmap</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>n.dot(v0) - 0.1</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>notations[i]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>f</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>samp.permutation['y']</expression-string>
         <language-id>JavaScript</language-id>
@@ -457,41 +460,6 @@
       </expression>
       <expression>
         <expression-string>this.permutation['x']</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>i</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>i[0]</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>samp.centers</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>samp</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>x</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>samp.pieces[1].children[0].geometry.faces[0].centroid</expression-string>
-        <language-id>JavaScript</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>samp.initState</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -574,40 +542,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="http://localhost:63342/Cubing/js/construct.js">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
     <entry file="https://cdn.bootcss.com/jquery/2.1.1/jquery.js">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
     <entry file="http://localhost:63342/Cubing/js/solver.js">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/three.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="33109" column="43" selection-start-line="33109" selection-start-column="43" selection-end-line="33109" selection-end-column="43" />
+        <state relative-caret-position="89">
+          <caret line="5718" column="19" selection-start-line="5718" selection-start-column="19" selection-end-line="5718" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/solver.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3954">
-          <caret line="204" column="37" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="37" />
+        <state relative-caret-position="205">
+          <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="http://localhost:63342/Cubing/js/construct.js">
+      <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/construct.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="372" column="9" selection-start-line="372" selection-start-column="9" selection-end-line="372" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="41">
+          <caret line="163" column="13" lean-forward="true" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -38,6 +38,7 @@
 
                     <li><a href="#" onclick="addPyra()">金字塔魔方</a></li>
                     <li><a href="#" onclick="addSkew()">斜转魔方</a></li>
+                    <li><a href="#" onclick="addMeg()">五魔方</a></li>
                 </ul>
             </li>
 
@@ -94,6 +95,9 @@
     let cnt = 0;
     let cntS = 0;
     let gra = 4;
+    let enableRotation = true;
+
+
     let Rubik = NewCube(3);
     Rubik.moveList = ['M2', 'U2', 'M2', 'U2', 'M2', 'U2', 'M2', 'U2'];
     displayCube(Rubik);

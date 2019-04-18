@@ -72,11 +72,22 @@ class Tcube {
                 abcd = [face.a, face.b, face.c];
                 geo.faces = [new THREE.Face3(0, 1, 2)];
             }
+            else {
+                abcd = face;
+                geo.faces = [new THREE.Face4(0, 1, 2, 3), new THREE.Face3(0, 3, 4)]
+            }
             for (let a of abcd) {
                 geo.vertices.push(new THREE.Vector3(v[a].x, v[a].y, v[a].z));
             }
             geo.computeCentroids();
-            let centroid = geo.faces[0].centroid;
+
+            let centroid = new THREE.Vector3();
+            for (let vv of geo.vertices) {
+                centroid = vecAddVec(centroid, vv);
+            }
+
+            centroid = vecMulScal(centroid, 1 / geo.vertices.length);
+
 
             for (let v of geo.vertices) {
                 v.sub(v, centroid);
@@ -93,7 +104,7 @@ class Tcube {
     fill(x, y, z, v, c) {
         for (let i = 0; i < this.pieces.length; i++) {
             let cal = this.centers[i].dot(new THREE.Vector3(x, y, z));
-            if (Math.abs(cal - v) < 0.0001) {
+            if (Math.abs(cal - v) < 0.001) {
                 let mat = new THREE.MeshBasicMaterial({color: c});
                 mat.side = THREE.DoubleSide;
                 this.pieces[i].children[0].material = mat;
@@ -125,6 +136,7 @@ class Tcube {
             }
         }
     }
+
     dMove() {
         if (this.gra !== undefined) gra = this.gra;
         if (this.currentMove.prog === 0) {
@@ -143,12 +155,24 @@ class Tcube {
         for (let i = 0; i < this.pieces.length; i++) {
             this.pieces[i].children[0].geometry.computeCentroids();
             let centroid = this.pieces[i].children[0].geometry.faces[0].centroid;
+            if (this.pieces[i].children[0].geometry.faces.length === 2) {
+                centroid = new THREE.Vector3();
+                for (let vv of this.pieces[i].children[0].geometry.vertices) {
+                    centroid = vecAddVec(centroid, vv);
+                }
+                centroid = vecMulScal(centroid, 1 / this.pieces[i].children[0].geometry.vertices.length);
+            }
             this.center.addSelf(centroid);
         }
         this.center.divideScalar(this.pieces.length);
 
         for (let i = 0; i < this.pieces.length; i++) {
-            let centroid = this.pieces[i].children[0].geometry.faces[0].centroid;
+            let centroid = new THREE.Vector3();
+            for (let vv of this.pieces[i].children[0].geometry.vertices) {
+                centroid = vecAddVec(centroid, vv);
+            }
+            centroid = vecMulScal(centroid, 1 / this.pieces[i].children[0].geometry.vertices.length);
+
             if (centroid.dot(new THREE.Vector3(x, y, z)) >= v && (v2 === undefined || centroid.dot(new THREE.Vector3(x, y, z)) <= v2)) {
                 centroid.subSelf(this.center);
                 let vec = new THREE.Vector3();
@@ -182,6 +206,7 @@ class Tcube {
             if (b === 0) return a;
             return gcd(b, a % b);
         }
+
         let myg = 0;
         for (let i in lenmap) {
             if (i.split(',')[0] != 0) {
@@ -196,7 +221,7 @@ class Tcube {
         this.permutation[move + '\''] = [];
         this.permutation[move + '\'2'] = [];
         for (let i in lenmap) {
-            if (i.split(',')[0] == 0) {
+            if (i.split(',')[0]  == 0) {
                 for (let x of lenmap[i]) {
                     this.permutation[move][x.id] = x.id;
                     this.permutation[move + '2'][x.id] = x.id;
@@ -228,6 +253,15 @@ let red = 0xff0000;
 let orange = 0xffa500;
 let white = 0xeeeeee;
 let yellow = 0xffff00;
+let purple = 0x8A2BE2;
+
+let deepGreen = 0x228B22;
+let shallowGreen = 0x7FFF00;
+let grey = 0x808A87;
+let skyBlue = 0x00FFFF;
+let fleshColor = 0xFFFFCD;
+let pink = 0xDA70D6;
+
 
 function NewSkew() {
     let n = 1;
@@ -264,12 +298,91 @@ function NewSkew() {
     return cube
 }
 
+function NewMegaminx() {
+    let vertex = [[-1.37638, 0., 0.262866], [1.37638,
+        0., -0.262866], [-0.425325, -1.30902, 0.262866], [-0.425325,
+        1.30902, 0.262866], [1.11352, -0.809017, 0.262866], [1.11352,
+        0.809017, 0.262866], [-0.262866, -0.809017, 1.11352], [-0.262866,
+        0.809017, 1.11352], [-0.688191, -0.5, -1.11352], [-0.688191,
+        0.5, -1.11352], [0.688191, -0.5, 1.11352], [0.688191, 0.5,
+        1.11352], [0.850651,
+        0., -1.11352], [-1.11352, -0.809017, -0.262866], [-1.11352,
+        0.809017, -0.262866], [-0.850651, 0.,
+        1.11352], [0.262866, -0.809017, -1.11352], [0.262866,
+        0.809017, -1.11352], [0.425325, -1.30902, -0.262866], [0.425325,
+        1.30902, -0.262866]];
+
+    for (let i = 0; i < 20; i++)
+        for (let j = 0; j < 3; j++)
+            vertex[i][j] *= 0.7;
+
+    let face = [[15, 10, 9, 14, 1], [2, 6, 12, 11, 5], [5, 11, 7, 3, 19], [11, 12, 8,
+        16, 7], [12, 6, 20, 4, 8], [6, 2, 13, 18, 20], [2, 5, 19, 17,
+        13], [4, 20, 18, 10, 15], [18, 13, 17, 9, 10], [17, 19, 3, 14,
+        9], [3, 7, 16, 1, 14], [16, 8, 4, 15, 1]];
+
+    let v = [];
+    let f = [];
+
+    // for (let i = 0; i < 20; i++)
+    //     v.push(new THREE.Vector3(vertex[i][0] * 0.7, vertex[i][1] * 0.7, vertex[i][2]  * 0.7));
+    for (let i = 0; i < 12; i++) {
+        for (let j = 0; j < 5; j++)
+            face[i][j] -= 1;
+
+        let vv = [];
+        for (let j = 0; j < 5; j++) {
+            let cur = v.length;
+            let v0 = new THREE.Vector3(vertex[face[i][j]][0], vertex[face[i][j]][1], vertex[face[i][j]][2]);
+            let v1 = new THREE.Vector3(vertex[face[i][(j + 1) % 5]][0], vertex[face[i][(j + 1) % 5]][1], vertex[face[i][(j + 1) % 5]][2]);
+            let v2 = new THREE.Vector3(vertex[face[i][(j + 2) % 5]][0], vertex[face[i][(j + 2) % 5]][1], vertex[face[i][(j + 2) % 5]][2]);
+            let v_ = new THREE.Vector3(vertex[face[i][(j + 4) % 5]][0], vertex[face[i][(j + 4) % 5]][1], vertex[face[i][(j + 4) % 5]][2]);
+            v.push(v0);
+            v.push(vecAddVec(vecMulScal(v0, 0.6), vecMulScal(v1, 0.4)));
+            v.push(vecAddVec(vecAddVec(vecMulScal(v0, 0.2), vecMulScal(v1, 0.4)), vecMulScal(v_, 0.4)));
+            v.push(vecAddVec(vecMulScal(v0, 0.6), vecMulScal(v_, 0.4)));
+            f.push(new THREE.Face4(cur, cur + 1, cur + 2, cur + 3));
+
+            cur = v.length;
+            v.push(vecAddVec(vecMulScal(v0, 0.6), vecMulScal(v1, 0.4)));
+            v.push(vecAddVec(vecMulScal(v0, 0.4), vecMulScal(v1, 0.6)));
+            v.push(vecAddVec(vecAddVec(vecMulScal(v1, 0.2), vecMulScal(v0, 0.4)), vecMulScal(v2, 0.4)));
+            v.push(vecAddVec(vecAddVec(vecMulScal(v0, 0.2), vecMulScal(v1, 0.4)), vecMulScal(v_, 0.4)));
+            f.push(new THREE.Face4(cur, cur + 1, cur + 2, cur + 3));
+
+            vv.push(vecAddVec(vecAddVec(vecMulScal(v0, 0.2), vecMulScal(v1, 0.4)), vecMulScal(v_, 0.4)));
+        }
+        let cur = v.length;
+        for (let vv_ of vv) {
+            v.push(vv_);
+        }
+        f.push([cur, cur + 1, cur + 2, cur + 3, cur + 4]);
+    }
+
+    let colors = [orange, red, deepGreen, white, blue, pink, fleshColor, shallowGreen, grey, skyBlue, purple, yellow];
+    let notations = ["DBL", "R", "F", "U", "BR", "DBR", "DR", "B", "D", "DL", "L", "BL"];
+
+
+    let meg = new Tcube(v, f);
+
+    for (let i = 0; i < 12; i++) {
+        let v0 = new THREE.Vector3(vertex[face[i][0]][0], vertex[face[i][0]][1], vertex[face[i][0]][2]);
+        let v1 = new THREE.Vector3(vertex[face[i][1]][0], vertex[face[i][1]][1], vertex[face[i][1]][2]);
+        let v2 = new THREE.Vector3(vertex[face[i][2]][0], vertex[face[i][2]][1], vertex[face[i][2]][2]);
+        let n = cross(vecSubVec(v2, v1), vecSubVec(v0, v1));
+        meg.fill(n.x, n.y, n.z, n.dot(v0), colors[i]);
+        meg.addmove(n.x, n.y, n.z, n.dot(v0) - 0.1, notations[i]);
+    }
+    return meg;
+
+}
+
 
 function NewPyramix() {
     let height = Math.sqrt(6) * 2 / 3;
     let ax1 = vecMulScal(new THREE.Vector3(1, 0, 0), 2 / 3);
     let ax2 = vecMulScal(new THREE.Vector3(1 / 2, Math.sqrt(3) / 2, 0), 2 / 3);
-    let ax3 = vecMulScal(new THREE.Vector3(1 / 2, Math.sqrt(3) / 6, height / 2), 2/ 3);
+    let ax3 = vecMulScal(new THREE.Vector3(1 / 2, Math.sqrt(3) / 6, height / 2), 2 / 3);
     let v = [];
     let f = [];
 
@@ -407,14 +520,12 @@ function displayCube(cube) {
     newSpan.appendChild(newButton);
 
 
-
     newPanel.appendChild(newHeading);
     newPanel.appendChild(newBody);
     document.getElementById(cnt.toString()).appendChild(cube.renderer.domElement);
 
     cnt++;
-    cube.camera.position = new THREE.Vector3(0, -2, 2);
-    cube.camera.rotation.x = 1;
+
     cube.scene = new THREE.Scene();
 
 
@@ -422,6 +533,7 @@ function displayCube(cube) {
         cube.scene.add(piece);
     }
     //cube.moveList = ['R', 'U', 'R\'', 'U\'', 'R\'', 'F', 'R2', 'U\'', 'R\'', 'U\'', 'R', 'U', 'R\'', 'F\''];
+    cube.rotAngle = 0;
 
     cube.render = function () {
         requestAnimationFrame(cube.render);
@@ -430,6 +542,14 @@ function displayCube(cube) {
             piece.children[1].geometry.verticesNeedUpdate = true;
         }
         cube.dMove();
+        if (enableRotation) {
+            cube.rotAngle += 0.01;
+        }
+        cube.camera.position = new THREE.Vector3(Math.sin(cube.rotAngle) * 2.5, -Math.cos(cube.rotAngle) * 2.5, 1);
+        // cube.camera.rotation.x = 1;
+        cube.camera.up = new THREE.Vector3(0, 0, 1);
+        cube.camera.lookAt(new THREE.Vector3(0, 0, 0));
+
         cube.renderer.render(cube.scene, cube.camera);
     };
 
@@ -446,7 +566,13 @@ function addPyra() {
     let Pyra = NewPyramix();
     myCube.push(Pyra);
     displayCube(Pyra);
-    Pyra.camera.position = new THREE.Vector3(1.5, -2, 2);
+    // Pyra.camera.position = new THREE.Vector3(1.5, -2, 2);
+}
+
+function addMeg() {
+    let Meg = NewMegaminx();
+    myCube.push(Meg);
+    displayCube(Meg);
 }
 
 function addSkew() {
@@ -454,4 +580,3 @@ function addSkew() {
     myCube.push(Skew);
     displayCube(Skew);
 }
-
