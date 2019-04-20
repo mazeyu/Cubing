@@ -238,11 +238,13 @@ class Tcube {
                 this.permutation[move + '\'2'][lenmap[i][j].id] = lenmap[i][(j + 2 * l / g) % l].id;
             }
         }
-
+        if (move[1] === "+") this.moveData[move[0] + "++"] = {x: x, y: y, z: z, v: v, d: 2 / g, v2: v2};
+        else this.moveData[move + '2'] = {x: x, y: y, z: z, v: v, d: 2 / g, v2: v2};
         this.moveData[move] = {x: x, y: y, z: z, v: v, d: 1 / g, v2: v2};
-        this.moveData[move + '2'] = {x: x, y: y, z: z, v: v, d: 2 / g, v2: v2};
         this.moveData[move + '\''] = {x: x, y: y, z: z, v: v, d: -1 / g, v2: v2};
-        this.moveData[move + '\'2'] = {x: x, y: y, z: z, v: v, d: -2 / g, v2: v2};
+
+        if (move[1] === "+") this.moveData[move[0] + "--"] = {x: x, y: y, z: z, v: v, d: -2 / g, v2: v2};
+        else this.moveData[move + '\'2'] = {x: x, y: y, z: z, v: v, d: -2 / g, v2: v2};
     }
 
 }
@@ -373,6 +375,20 @@ function NewMegaminx() {
         meg.fill(n.x, n.y, n.z, n.dot(v0), colors[i]);
         meg.addmove(n.x, n.y, n.z, n.dot(v0) - 0.1, notations[i]);
     }
+    let i = 10;
+    let v0 = new THREE.Vector3(vertex[face[i][0]][0], vertex[face[i][0]][1], vertex[face[i][0]][2]);
+    let v1 = new THREE.Vector3(vertex[face[i][1]][0], vertex[face[i][1]][1], vertex[face[i][1]][2]);
+    let v2 = new THREE.Vector3(vertex[face[i][2]][0], vertex[face[i][2]][1], vertex[face[i][2]][2]);
+    let n = cross(vecSubVec(v2, v1), vecSubVec(v0, v1));
+    meg.addmove(-n.x, -n.y, -n.z, -n.dot(v0) + 0.1, "R+");
+
+    i = 3;
+    v0 = new THREE.Vector3(vertex[face[i][0]][0], vertex[face[i][0]][1], vertex[face[i][0]][2]);
+    v1 = new THREE.Vector3(vertex[face[i][1]][0], vertex[face[i][1]][1], vertex[face[i][1]][2]);
+    v2 = new THREE.Vector3(vertex[face[i][2]][0], vertex[face[i][2]][1], vertex[face[i][2]][2]);
+    n = cross(vecSubVec(v2, v1), vecSubVec(v0, v1));
+    meg.addmove(-n.x, -n.y, -n.z, -n.dot(v0) + 0.1, "D+");
+
     return meg;
 
 }
