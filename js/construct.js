@@ -1,3 +1,27 @@
+let green = 0x00ff00;
+let blue = 0x0000ff;
+let red = 0xff0000;
+let orange = 0xffa500;
+let white = 0xeeeeee;
+let yellow = 0xffff00;
+let purple = 0x8A2BE2;
+
+let deepGreen = 0x228B22;
+let shallowGreen = 0x7FFF00;
+let grey = 0x808A87;
+let skyBlue = 0x00FFFF;
+let fleshColor = 0xFFFFCD;
+let pink = 0xDA70D6;
+
+var color_dict  = {
+    'g': green,
+    'o': orange,
+    'r': red,
+    'b': blue,
+    'w': white,
+    'y': yellow
+};
+
 function vecMulScal(vec, scal) {
     return new THREE.Vector3(vec.x * scal, vec.y * scal, vec.z * scal);
 }
@@ -111,6 +135,133 @@ class Tcube {
                 this.initState[i] = c;
             }
         }
+    }
+
+    fill0 (x, y, z, c) {
+        // alert(c);
+        for (let ii = 0; ii < this.pieces.length; ii++) {
+            let tmp = vecSubVec(this.centers[ii], new THREE.Vector3(x, y, z));
+
+            let n = tmp.length();
+            if (n < 0.001) {
+
+                let mat = new THREE.MeshBasicMaterial({color: c});
+                mat.side = THREE.DoubleSide;
+                this.pieces[ii].children[0].material = mat;
+                // this.initState[i] = c;
+            }
+        }
+    }
+
+    fillWithFile(text) {
+        let faces = text.split("\n");
+        let n = this.n;
+        // alert("                 y w w b y".split(/[ ,]+/));
+        // alert(faces[0]);
+        for (let i = 0; i < n; i++) {
+
+            let linei = faces[i];//.trim().replace("  ", " ");
+            // alert(linei);
+            let lineis = linei.split(' ');
+            let j_ = 0;
+
+            for (let j = 0; ;j++) {
+                // alert(j_);
+                if (lineis[j] == "") {
+                    continue;
+                }
+
+                if (j_ == n) break;
+                let x = -0.5 + 0.5 / n + j_ * 1.0 / n;
+                let y = 0.5 - 0.5 / n - i * 1.0 / n;
+                let z = 0.5;
+                // alert(lineis[j]);
+                let c = color_dict[lineis[j]];
+
+                this.fill0(x, y, z, c);
+                j_++;
+
+            }
+
+        }
+
+        for (let i = n; i < n * 2; i++) {
+            let linei = faces[i];//.trim().replace("  ", " ");
+            let lineis = linei.split(' ');
+            let j_ = 0;
+            let i_ = i - n;
+            for (let j = 0; ;j++) {
+                // alert(j_);
+                if (lineis[j] == "") {
+                    continue;
+                }
+
+                if (j_ == n * 4) break;
+                if (j_ < n) {
+                    let x = -0.5;
+                    let y = 0.5 - 0.5 / n - j_ * 1.0 / n;
+                    let z = 0.5 - 0.5 / n - i_ * 1.0 / n;
+                    let c = color_dict[lineis[j]];
+
+                    this.fill0(x, y, z, c);
+                }
+                else if (j_ < 2 * n) {
+                    let x = -0.5 + 0.5 / n + (j_ - n) * 1.0 / n;
+                    let y = -0.5;
+                    let z = 0.5 - 0.5 / n - i_ * 1.0 / n;
+                    let c = color_dict[lineis[j]];
+
+                    this.fill0(x, y, z, c);
+                }
+                else  if (j_ < 3 * n) {
+                    let x = 0.5;
+                    let y = -0.5 + 0.5 / n + (j_ - n * 2) * 1.0 / n;
+                    let z = 0.5 - 0.5 / n - i_ * 1.0 / n;
+                    let c = color_dict[lineis[j]];
+
+                    this.fill0(x, y, z, c);
+                }
+                else {
+                    let x = 0.5 - 0.5 / n - (j_ - n * 3) * 1.0 / n;
+                    let y = 0.5;
+                    let z = 0.5 - 0.5 / n - i_ * 1.0 / n;
+                    let c = color_dict[lineis[j]];
+
+                    this.fill0(x, y, z, c);
+                }
+                j_++;
+
+            }
+
+
+
+        }
+
+        for (let i = n * 2; i < n * 3; i++) {
+            let linei = faces[i];//.trim().replace("  ", " ");
+            let lineis = linei.split(' ');
+            let j_ = 0;
+
+            for (let j = 0; ;j++) {
+                // alert(j_);
+                if (lineis[j] == "") {
+                    continue;
+                }
+
+                if (j_ == n) break;
+
+                let x = -0.5 + 0.5 / n + j_ * 1.0 / n;
+                let y = -0.5 + 0.5 / n + (i - 2 * n) * 1.0 / n;
+                let z = -0.5;
+                let c = color_dict[lineis[j]];
+
+                this.fill0(x, y, z, c);
+                j_++;
+
+            }
+
+        }
+
     }
 
     move0(move, gra) {
@@ -249,20 +400,6 @@ class Tcube {
 
 }
 
-let green = 0x00ff00;
-let blue = 0x0000ff;
-let red = 0xff0000;
-let orange = 0xffa500;
-let white = 0xeeeeee;
-let yellow = 0xffff00;
-let purple = 0x8A2BE2;
-
-let deepGreen = 0x228B22;
-let shallowGreen = 0x7FFF00;
-let grey = 0x808A87;
-let skyBlue = 0x00FFFF;
-let fleshColor = 0xFFFFCD;
-let pink = 0xDA70D6;
 
 
 function NewSkew() {
@@ -485,8 +622,9 @@ function NewCube(n) {
     cube.addmove(0, -1, 0, -999, 'z', 999, 4);
 
 
-    let chara = ['二', '三', '四', '五', '六', '七'];
-    cube.name = chara[n - 2] + '阶魔方';
+    let chara = ['2x2', '3x3', '4x4', '5x5', '6x6', '7x7'];
+    cube.name = chara[n - 2] + 'Cubes';
+    cube.n = n;
     return cube;
 }
 
@@ -498,6 +636,7 @@ function add2Move() {
         myCube[this.label].moveList.push(move);
     }
 }
+
 
 function displayCube(cube) {
     cube.camera = new THREE.PerspectiveCamera(55, 1.25, 0.1, 1000);
@@ -522,7 +661,7 @@ function displayCube(cube) {
     newInput.id = 'text' + cnt.toString();
     newInput.type = 'text';
     newInput.className = 'form-control';
-    newInput.placeholder = '输入转动';
+    newInput.placeholder = 'Input moves';
     newInputGroup.appendChild(newInput);
     let newSpan = document.createElement('span');
     newSpan.className = 'input-group-btn';
@@ -531,10 +670,34 @@ function displayCube(cube) {
     newButton.label = cnt;
     newButton.className = 'btn btn-default';
     newButton.type = 'button';
-    newButton.textContent = '确认';
+    newButton.textContent = 'Confirm';
     newButton.onclick = add2Move;
+
     newSpan.appendChild(newButton);
 
+
+
+    let file = document.createElement('input');
+    file.type = 'file';
+    file.label = cnt;
+    file.className = 'file';
+    file.textContent = 'input from file';
+    file.addEventListener('change',function(){
+        var file_ = this;
+        var fileVal = this.files[0];
+        var fileName = this.files[0].name;
+        var reader = new FileReader();
+        reader.readAsText(fileVal,'gb2312');
+        reader.onload = function(){
+            var text = this.result;
+            // alert(text);
+            myCube[file_.label].fillWithFile(text);
+
+        };
+
+    });
+
+    newSpan.appendChild(file);
 
     newPanel.appendChild(newHeading);
     newPanel.appendChild(newBody);
