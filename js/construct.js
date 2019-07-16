@@ -677,6 +677,33 @@ function displayCube(cube) {
 
 
 
+
+    // let file2 = document.createElement('input');
+    // file2.type = 'file';
+    // file2.label = cnt;
+    // file2.className = 'file';
+    // file2.textContent = 'input from file';
+    // file.addEventListener('change',function(){
+    //     var file_ = this;
+    //     var fileVal = this.files[0];
+    //     var fileName = this.files[0].name;
+    //     var reader = new FileReader();
+    //     reader.readAsText(fileVal,'gb2312');
+    //     reader.onload = function(){
+    //         var text = this.result;
+    //         // alert(text);
+    //         myCube[file_.label].fillWithFile(text);
+    //
+    //     };
+    //
+    // });
+    //
+    // newSpan.appendChild(file);
+
+    let stateInput = document.createTextNode("state input file");
+
+    newBody.appendChild(stateInput);
+
     let file = document.createElement('input');
     file.type = 'file';
     file.label = cnt;
@@ -697,7 +724,38 @@ function displayCube(cube) {
 
     });
 
-    newSpan.appendChild(file);
+    newBody.appendChild(file);
+
+
+    let moveInput = document.createTextNode("moves input file");
+
+    newBody.appendChild(moveInput);
+
+    let file2 = document.createElement('input');
+    file2.type = 'file';
+    file2.label = cnt;
+    file2.className = 'file';
+    file2.textContent = 'input from file';
+    file2.addEventListener('change',function(){
+        var file_ = this;
+        var fileVal = this.files[0];
+        var fileName = this.files[0].name;
+        var reader = new FileReader();
+        reader.readAsText(fileVal,'gb2312');
+        reader.onload = function(){
+            var text = this.result;
+            // alert(text);
+            if (text === '') return;
+            for (let move of text.split(/[\n ]/)) {
+                if (move === '') continue;
+                myCube[file_.label].moveList.push(move);
+            }
+        };
+
+    });
+
+    newBody.appendChild(file2);
+
 
     newPanel.appendChild(newHeading);
     newPanel.appendChild(newBody);
