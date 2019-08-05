@@ -638,7 +638,7 @@ function add2Move() {
 }
 
 
-function displayCube(cube) {
+function displayCube(cube, defaultMoves) {
     cube.camera = new THREE.PerspectiveCamera(55, 1.25, 0.1, 1000);
     cube.renderer = new THREE.WebGLRenderer();
     cube.renderer.setSize(500, 400);
@@ -662,6 +662,9 @@ function displayCube(cube) {
     newInput.type = 'text';
     newInput.className = 'form-control';
     newInput.placeholder = 'Input moves';
+    if (defaultMoves !== undefined) {
+        newInput.defaultValue = defaultMoves;
+    }
     newInputGroup.appendChild(newInput);
     let newSpan = document.createElement('span');
     newSpan.className = 'input-group-btn';
